@@ -1,6 +1,7 @@
 # MACS Adaptive Regulation Benchmark (MACS ARB) LV2
 - Fast adaptative regulation of multiple unknown, time-varying disturbances.
 - A continuation of the [level 1 ARR](https://github.com/macs-lab/macs-arb-adaptive-regulation-benchmark)
+- This is a incomplete codebase for training purposes. 
 
 The MACS ARB is a top-tier algorithm in the 2012-2013 [*International Benchmark on Adaptive Regulation*](http://dx.doi.org/10.1016/j.ejcon.2013.05.007) by Ioan D. Landau. The benchmark provided state-of-the-art evaluation and dissemination of adaptation methods for active vibration control and noise control. 
 
@@ -13,3 +14,7 @@ See details in: [Chen, X.; and Tomizuka, M. Selective Model Inversion and Adapti
 run 
 standard_test_2bd_embedFun_submit.m 
 and configure options at the command prompt.
+
+## Complete the Code
+
+Edit the Simulink Model "simulator_bench_2bd_simuSubmit.mdl". Complete the parameter adaptation algorithm (PAA) in the disturbance observer: "simulator_bench_2bd_simuSubmit/Adaptive Disturbance Observer/dist. ID"

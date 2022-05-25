@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "23.17"
+    ComputedModelVersion    "23.18"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -21,6 +21,18 @@ Model {
     IsAUTOSARArchitectureModel 0
     NumParameterArguments   0
     NumExternalFileReferences 5
+    ExternalFileReference {
+      Reference		      "cstblocks/LTI System"
+      Path		      "simulator_bench_2bd_simuSubmit/Adaptive Disturbance Observer/dist. ID/denoise filter"
+      SID		      "765"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "cstblocks/LTI System"
+      Path		      "simulator_bench_2bd_simuSubmit/Adaptive Disturbance Observer/stable P inverse"
+      SID		      "769"
+      Type		      "LIBRARY_BLOCK"
+    }
     ExternalFileReference {
       Reference		      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
       Path		      "simulator_bench_2bd_simuSubmit/Disturbance Generator/Regulateur1/Stanislav/L2 or L3"
@@ -39,18 +51,6 @@ Model {
       SID		      "478"
       Type		      "LIBRARY_BLOCK"
     }
-    ExternalFileReference {
-      Reference		      "cstblocks/LTI System"
-      Path		      "simulator_bench_2bd_simuSubmit/Subsystem/dist. ID/denoise filter"
-      SID		      "765"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "cstblocks/LTI System"
-      Path		      "simulator_bench_2bd_simuSubmit/Subsystem/stable P inverse"
-      SID		      "769"
-      Type		      "LIBRARY_BLOCK"
-    }
     OrderedModelArguments   1
   }
   LogicAnalyzerPlugin	  "on"
@@ -66,22 +66,22 @@ Model {
   "tracking_level=\"0\" version=\"6\">\n				<SuppressedData class_id=\"6\" tracking_level=\"0\" version=\"0\">\n					<c"
   "ount>2</count>\n					<bucket_count>2</bucket_count>\n					<item_version>0</item_version>\n					<item class_id=\"7\" "
   "tracking_level=\"0\" version=\"0\">\n						<first class_id=\"8\" tracking_level=\"0\" version=\"6\">\n							<ID>Sim"
-  "ulink:DataType:WarningOverFlowDetected</ID>\n							<Cause>\n								<Source>\n									<count>0</count>\n									<"
-  "item_version>0</item_version>\n								</Source>\n							</Cause>\n						</first>\n						<second class_id=\"9\" trac"
-  "king_level=\"0\" version=\"6\">\n							<Comment></Comment>\n							<User></User>\n							<LastModified class_id=\"1"
-  "0\" tracking_level=\"0\" version=\"0\">\n								<ptime_date class_id=\"11\" tracking_level=\"0\" version=\"0\">\n		"
-  "							<date>20160608</date>\n								</ptime_date>\n								<ptime_time_duration class_id=\"12\" tracking_level=\"0"
-  "\" version=\"1\">\n									<is_special>0</is_special>\n									<time_duration_hours>15</time_duration_hours>\n				"
-  "					<time_duration_minutes>23</time_duration_minutes>\n									<time_duration_seconds>17</time_duration_seconds>\n"
-  "									<time_duration_fractional_seconds>0</time_duration_fractional_seconds>\n								</ptime_time_duration>\n			"
-  "				</LastModified>\n							<SuppressionType>1</SuppressionType>\n						</second>\n					</item>\n					<item>\n						"
-  "<first>\n							<ID>SimulinkFixedPoint:util:Overflowoccurred</ID>\n							<Cause>\n								<Source>\n									<count"
-  ">0</count>\n									<item_version>0</item_version>\n								</Source>\n							</Cause>\n						</first>\n						<seco"
-  "nd>\n							<Comment></Comment>\n							<User></User>\n							<LastModified>\n								<ptime_date>\n									<date>2"
-  "0160608</date>\n								</ptime_date>\n								<ptime_time_duration>\n									<is_special>0</is_special>\n									"
-  "<time_duration_hours>15</time_duration_hours>\n									<time_duration_minutes>23</time_duration_minutes>\n									"
-  "<time_duration_seconds>17</time_duration_seconds>\n									<time_duration_fractional_seconds>0</time_duration_fract"
-  "ional_seconds>\n								</ptime_time_duration>\n							</LastModified>\n							<SuppressionType>1</SuppressionType>\n"
+  "ulinkFixedPoint:util:Overflowoccurred</ID>\n							<Cause>\n								<Source>\n									<count>0</count>\n									<i"
+  "tem_version>0</item_version>\n								</Source>\n							</Cause>\n						</first>\n						<second class_id=\"9\" track"
+  "ing_level=\"0\" version=\"6\">\n							<Comment></Comment>\n							<User></User>\n							<LastModified class_id=\"10"
+  "\" tracking_level=\"0\" version=\"0\">\n								<ptime_date class_id=\"11\" tracking_level=\"0\" version=\"0\">\n			"
+  "						<date>20160608</date>\n								</ptime_date>\n								<ptime_time_duration class_id=\"12\" tracking_level=\"0\""
+  " version=\"1\">\n									<is_special>0</is_special>\n									<time_duration_hours>15</time_duration_hours>\n						"
+  "			<time_duration_minutes>23</time_duration_minutes>\n									<time_duration_seconds>17</time_duration_seconds>\n		"
+  "							<time_duration_fractional_seconds>0</time_duration_fractional_seconds>\n								</ptime_time_duration>\n					"
+  "		</LastModified>\n							<SuppressionType>1</SuppressionType>\n						</second>\n					</item>\n					<item>\n						<f"
+  "irst>\n							<ID>Simulink:DataType:WarningOverFlowDetected</ID>\n							<Cause>\n								<Source>\n									<count>"
+  "0</count>\n									<item_version>0</item_version>\n								</Source>\n							</Cause>\n						</first>\n						<secon"
+  "d>\n							<Comment></Comment>\n							<User></User>\n							<LastModified>\n								<ptime_date>\n									<date>20"
+  "160608</date>\n								</ptime_date>\n								<ptime_time_duration>\n									<is_special>0</is_special>\n									<"
+  "time_duration_hours>15</time_duration_hours>\n									<time_duration_minutes>23</time_duration_minutes>\n									<"
+  "time_duration_seconds>17</time_duration_seconds>\n									<time_duration_fractional_seconds>0</time_duration_fracti"
+  "onal_seconds>\n								</ptime_time_duration>\n							</LastModified>\n							<SuppressionType>1</SuppressionType>\n"
   "						</second>\n					</item>\n				</SuppressedData>\n			</second>\n		</item>\n	</Table>\n</DiagnosticSuppressor>\n\n"
   "</boost_serialization>\n\n</boost_serialization>\n\n"
   AnimationPlugin	  "on"
@@ -108,7 +108,7 @@ Model {
       Dimension		      2
       Object {
 	$ObjectID		2
-	IsActive		[1]
+	IsActive		[0]
 	Location		[604.0, 44.0, 1316.0, 843.0]
 	Object {
 	  $PropName		  "ModelBrowserInfo"
@@ -211,7 +211,7 @@ Model {
       }
       Object {
 	$ObjectID		10
-	IsActive		[0]
+	IsActive		[1]
 	Location		[0.0, 0.0, 1920.0, 1080.0]
 	Object {
 	  $PropName		  "ModelBrowserInfo"
@@ -230,24 +230,71 @@ Model {
 	  $ClassName		  "Simulink.ExplorerBarInfo"
 	  Visible		  [1]
 	}
-	Object {
-	  $PropName		  "EditorsInfo"
-	  $ObjectID		  13
-	  $ClassName		  "Simulink.EditorInfo"
-	  IsActive		  [1]
-	  IsTabbed		  [1]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
-	  Extents		  [1882.0, 845.0]
-	  ZoomFactor		  [1.5]
-	  Offset		  [21.358333333333235, 52.325000000000045]
-	  SceneRectInView	  [21.358333333333235, 52.325000000000045, 1254.6666666666667, 563.33333333333337]
+	Array {
+	  Type			  "Simulink.EditorInfo"
+	  Dimension		  5
+	  Object {
+	    $ObjectID		    13
+	    IsActive		    [1]
+	    IsTabbed		    [1]
+	    ViewObjType		    "SimulinkSubsys"
+	    LoadSaveID		    "777"
+	    Extents		    [1882.0, 845.0]
+	    ZoomFactor		    [1.111842105263158]
+	    Offset		    [-377.33147651627212, -80.250000000000227]
+	    SceneRectInView	    [-377.33147651627212, -80.250000000000227, 1692.6863905325442, 760.0]
+	  }
+	  Object {
+	    $ObjectID		    14
+	    IsActive		    [0]
+	    IsTabbed		    [0]
+	    ViewObjType		    "SimulinkTopLevel"
+	    LoadSaveID		    "0"
+	    Extents		    [1882.0, 845.0]
+	    ZoomFactor		    [1.5]
+	    Offset		    [21.358333333333235, 52.325000000000045]
+	    SceneRectInView	    [21.358333333333235, 52.325000000000045, 1254.6666666666667, 563.33333333333337]
+	  }
+	  Object {
+	    $ObjectID		    15
+	    IsActive		    [0]
+	    IsTabbed		    [0]
+	    ViewObjType		    "SimulinkSubsys"
+	    LoadSaveID		    "474"
+	    Extents		    [1882.0, 845.0]
+	    ZoomFactor		    [1.0]
+	    Offset		    [-511.0, -227.5]
+	    SceneRectInView	    [-511.0, -227.5, 1882.0, 845.0]
+	  }
+	  Object {
+	    $ObjectID		    16
+	    IsActive		    [0]
+	    IsTabbed		    [0]
+	    ViewObjType		    "SimulinkSubsys"
+	    LoadSaveID		    "842"
+	    Extents		    [1882.0, 845.0]
+	    ZoomFactor		    [2.0847039473684212]
+	    Offset		    [75.741962524654866, -22.533333333333275]
+	    SceneRectInView	    [75.741962524654866, -22.533333333333275, 902.76607495069027, 405.33333333333331]
+	  }
+	  Object {
+	    $ObjectID		    17
+	    IsActive		    [0]
+	    IsTabbed		    [0]
+	    ViewObjType		    "SimulinkSubsys"
+	    LoadSaveID		    "480"
+	    Extents		    [1882.0, 845.0]
+	    ZoomFactor		    [1.0]
+	    Offset		    [-823.5, -329.0]
+	    SceneRectInView	    [-823.5, -329.0, 1882.0, 845.0]
+	  }
+	  PropName		  "EditorsInfo"
 	}
 	Array {
 	  Type			  "Simulink.DockComponentInfo"
 	  Dimension		  2
 	  Object {
-	    $ObjectID		    14
+	    $ObjectID		    18
 	    Type		    "GLUE2:PropertyInspector"
 	    ID			    "Property Inspector"
 	    Visible		    [0]
@@ -260,7 +307,7 @@ Model {
 	    Minimized		    "Unset"
 	  }
 	  Object {
-	    $ObjectID		    15
+	    $ObjectID		    19
 	    Type		    "Simulink:Editor:ReferencedFiles"
 	    ID			    "Referenced Files"
 	    Visible		    [0]
@@ -300,9 +347,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "xuchen"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue May 24 20:55:57 2022"
-  RTWModifiedTimeStamp	  575325492
-  ModelVersionFormat	  "%<AutoIncrement:23.17>"
+  LastModifiedDate	  "Tue May 24 21:16:21 2022"
+  RTWModifiedTimeStamp	  575327730
+  ModelVersionFormat	  "%<AutoIncrement:23.18>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -359,7 +406,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    16
+    $ObjectID		    20
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "simulator_bench_2bd_simuSubmit"
     Array {
@@ -405,7 +452,7 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      17
+      $ObjectID		      21
       Version		      "20.1.0"
       DisabledProps	      []
       Description	      ""
@@ -413,7 +460,7 @@ Model {
 	Type			"Handle"
 	Dimension		9
 	Simulink.SolverCC {
-	  $ObjectID		  18
+	  $ObjectID		  22
 	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -455,7 +502,7 @@ Model {
 	  ODENIntegrationMethod	  "ode3"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  19
+	  $ObjectID		  23
 	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -497,7 +544,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  20
+	  $ObjectID		  24
 	  Version		  "20.1.0"
 	  Array {
 	    Type		    "Cell"
@@ -571,7 +618,7 @@ Model {
 	  EfficientTunableParamExpr off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  21
+	  $ObjectID		  25
 	  Version		  "20.1.0"
 	  Array {
 	    Type		    "Cell"
@@ -694,7 +741,7 @@ Model {
 	  VariantConditionMismatch "none"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  22
+	  $ObjectID		  26
 	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -744,7 +791,7 @@ Model {
 	  HardwareBoardFeatureSet "EmbeddedCoderHSP"
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  23
+	  $ObjectID		  27
 	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -764,7 +811,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  24
+	  $ObjectID		  28
 	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -808,7 +855,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  25
+	  $ObjectID		  29
 	  Version		  "20.1.0"
 	  Array {
 	    Type		    "Cell"
@@ -914,7 +961,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      26
+	      $ObjectID		      30
 	      Version		      "20.1.0"
 	      Array {
 		Type			"Cell"
@@ -1004,7 +1051,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      27
+	      $ObjectID		      31
 	      Version		      "20.1.0"
 	      Array {
 		Type			"Cell"
@@ -1111,7 +1158,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  28
+	  $ObjectID		  32
 	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -1160,11 +1207,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    17
+    $ObjectID		    21
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    29
+    $ObjectID		    33
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -1587,9 +1634,9 @@ Model {
   }
   System {
     Name		    "simulator_bench_2bd_simuSubmit"
-    Location		    [604, 44, 1920, 887]
+    Location		    [0, 0, 1920, 1080]
     SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
-    Open		    on
+    Open		    off
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
     ExecutionDomainType	    "Deduce"
@@ -1639,6 +1686,2069 @@ Model {
     }
     Block {
       BlockType		      SubSystem
+      Name		      "Adaptive Disturbance Observer"
+      SID		      "842"
+      Ports		      [2, 1]
+      Position		      [565, 255, 625, 295]
+      ZOrder		      -11
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "magenta"
+      NameLocation	      "left"
+      RequestExecContextInheritance off
+      System {
+	Name			"Adaptive Disturbance Observer"
+	Location		[0, 0, 1920, 1080]
+	SystemRect		[0.000000, 0.000000, 0.000000, 0.000000]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"208"
+	SimulinkSubDomain	"Simulink"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "845"
+	  Position		  [255, 110, 285, 125]
+	  ZOrder		  -1
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  NameLocation		  "right"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y"
+	  SID			  "843"
+	  Position		  [400, 25, 430, 40]
+	  ZOrder		  -2
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  NameLocation		  "right"
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Embedded\nMATLAB Function1"
+	  SID			  "814"
+	  Ports			  [4, 1]
+	  Position		  [240, 245, 355, 310]
+	  ZOrder		  -3
+	  BlockMirror		  on
+	  BackgroundColor	  "lightBlue"
+	  NameLocation		  "top"
+	  ShowName		  off
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  SFBlockType		  "MATLAB Function"
+	  System {
+	    Name		    "Embedded\nMATLAB Function1"
+	    Location		    [219, 337, 814, 775]
+	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "23"
+	    SIDPrevWatermark	    "20"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "xk_ori"
+	      SID		      "814::2"
+	      Position		      [20, 101, 40, 119]
+	      ZOrder		      -1
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SW"
+	      SID		      "814::3"
+	      Position		      [20, 136, 40, 154]
+	      ZOrder		      -2
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "alpha"
+	      SID		      "814::4"
+	      Position		      [20, 171, 40, 189]
+	      ZOrder		      -3
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "theta"
+	      SID		      "814::6"
+	      Position		      [20, 206, 40, 224]
+	      ZOrder		      -4
+	      Port		      "4"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "814::22"
+	      Ports		      [1, 1]
+	      Position		      [270, 230, 320, 270]
+	      ZOrder		      2
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "814::21"
+	      Tag		      "Stateflow S-Function 1"
+	      Ports		      [4, 2]
+	      Position		      [180, 102, 230, 203]
+	      ZOrder		      1
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[4 2]"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      on
+	      SFcnIsStateOwnerBlock   off
+	      Port {
+		PortNumber		2
+		Name			"comp_sig"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "814::23"
+	      Position		      [460, 241, 480, 259]
+	      ZOrder		      3
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "comp_sig"
+	      SID		      "814::14"
+	      Position		      [460, 101, 480, 119]
+	      ZOrder		      -8
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "xk_ori"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, 5]
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "SW"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, -5]
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "alpha"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, -15]
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "theta"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, -25]
+	      DstBlock		      " SFunction "
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "comp_sig"
+	      ZOrder		      12
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      Points		      [115, 0; 0, -70]
+	      DstBlock		      "comp_sig"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      13
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      14
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      Points		      [16, 0; 0, 120]
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Embedded\nMATLAB Function2"
+	  SID			  "821"
+	  Ports			  [4, 1]
+	  Position		  [700, 50, 815, 115]
+	  ZOrder		  -4
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  SFBlockType		  "MATLAB Function"
+	  System {
+	    Name		    "Embedded\nMATLAB Function2"
+	    Location		    [219, 337, 814, 775]
+	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "23"
+	    SIDPrevWatermark	    "20"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "xk_ori"
+	      SID		      "821::2"
+	      Position		      [20, 101, 40, 119]
+	      ZOrder		      -1
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SW"
+	      SID		      "821::3"
+	      Position		      [20, 136, 40, 154]
+	      ZOrder		      -2
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "alpha"
+	      SID		      "821::4"
+	      Position		      [20, 171, 40, 189]
+	      ZOrder		      -3
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "theta"
+	      SID		      "821::6"
+	      Position		      [20, 206, 40, 224]
+	      ZOrder		      -4
+	      Port		      "4"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "821::22"
+	      Ports		      [1, 1]
+	      Position		      [270, 230, 320, 270]
+	      ZOrder		      2
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "821::21"
+	      Tag		      "Stateflow S-Function 5"
+	      Ports		      [4, 2]
+	      Position		      [180, 102, 230, 203]
+	      ZOrder		      1
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[4 2]"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      on
+	      SFcnIsStateOwnerBlock   off
+	      Port {
+		PortNumber		2
+		Name			"output"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "821::23"
+	      Position		      [460, 241, 480, 259]
+	      ZOrder		      3
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "output"
+	      SID		      "821::14"
+	      Position		      [460, 101, 480, 119]
+	      ZOrder		      -8
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "xk_ori"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, 5]
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "SW"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, -5]
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "alpha"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, -15]
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "theta"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, -25]
+	      DstBlock		      " SFunction "
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "output"
+	      ZOrder		      12
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      Points		      [119, 0; 0, -70]
+	      DstBlock		      "output"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      13
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      14
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      Points		      [16, 0; 0, 120]
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Embedded\nMATLAB Function3"
+	  SID			  "1274"
+	  Ports			  [4, 1]
+	  Position		  [395, 245, 510, 310]
+	  ZOrder		  -5
+	  BlockMirror		  on
+	  BackgroundColor	  "lightBlue"
+	  NameLocation		  "top"
+	  ShowName		  off
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  SFBlockType		  "MATLAB Function"
+	  System {
+	    Name		    "Embedded\nMATLAB Function3"
+	    Location		    [219, 337, 814, 775]
+	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "23"
+	    SIDPrevWatermark	    "20"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "xk_ori"
+	      SID		      "1274::2"
+	      Position		      [20, 101, 40, 119]
+	      ZOrder		      -1
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SW"
+	      SID		      "1274::3"
+	      Position		      [20, 136, 40, 154]
+	      ZOrder		      -2
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "alpha"
+	      SID		      "1274::4"
+	      Position		      [20, 171, 40, 189]
+	      ZOrder		      -3
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "theta"
+	      SID		      "1274::6"
+	      Position		      [20, 206, 40, 224]
+	      ZOrder		      -4
+	      Port		      "4"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "1274::22"
+	      Ports		      [1, 1]
+	      Position		      [270, 230, 320, 270]
+	      ZOrder		      2
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "1274::21"
+	      Tag		      "Stateflow S-Function 2"
+	      Ports		      [4, 2]
+	      Position		      [180, 102, 230, 203]
+	      ZOrder		      1
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[4 2]"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      on
+	      SFcnIsStateOwnerBlock   off
+	      Port {
+		PortNumber		2
+		Name			"output"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "1274::23"
+	      Position		      [460, 241, 480, 259]
+	      ZOrder		      3
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "output"
+	      SID		      "1274::14"
+	      Position		      [460, 101, 480, 119]
+	      ZOrder		      -8
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "xk_ori"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, 5]
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "SW"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, -5]
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "alpha"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, -15]
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "theta"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, -25]
+	      DstBlock		      " SFunction "
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "output"
+	      ZOrder		      12
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      Points		      [119, 0; 0, -70]
+	      DstBlock		      "output"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      13
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      14
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      Points		      [16, 0; 0, 120]
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Embedded\nMATLAB Function7"
+	  SID			  "820"
+	  Ports			  [4, 1]
+	  Position		  [700, 170, 815, 235]
+	  ZOrder		  -6
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  SFBlockType		  "MATLAB Function"
+	  System {
+	    Name		    "Embedded\nMATLAB Function7"
+	    Location		    [219, 337, 814, 775]
+	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "23"
+	    SIDPrevWatermark	    "20"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "xk_ori"
+	      SID		      "820::2"
+	      Position		      [20, 101, 40, 119]
+	      ZOrder		      -1
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SW"
+	      SID		      "820::3"
+	      Position		      [20, 136, 40, 154]
+	      ZOrder		      -2
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "alpha"
+	      SID		      "820::4"
+	      Position		      [20, 171, 40, 189]
+	      ZOrder		      -3
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "theta"
+	      SID		      "820::6"
+	      Position		      [20, 206, 40, 224]
+	      ZOrder		      -4
+	      Port		      "4"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "820::22"
+	      Ports		      [1, 1]
+	      Position		      [270, 230, 320, 270]
+	      ZOrder		      2
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "820::21"
+	      Tag		      "Stateflow S-Function 4"
+	      Ports		      [4, 2]
+	      Position		      [180, 102, 230, 203]
+	      ZOrder		      1
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[4 2]"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      on
+	      SFcnIsStateOwnerBlock   off
+	      Port {
+		PortNumber		2
+		Name			"output"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "820::23"
+	      Position		      [460, 241, 480, 259]
+	      ZOrder		      3
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "output"
+	      SID		      "820::14"
+	      Position		      [460, 101, 480, 119]
+	      ZOrder		      -8
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "xk_ori"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, 5]
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "SW"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, -5]
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "alpha"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, -15]
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "theta"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, -25]
+	      DstBlock		      " SFunction "
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "output"
+	      ZOrder		      12
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      Points		      [119, 0; 0, -70]
+	      DstBlock		      "output"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      13
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      14
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      Points		      [16, 0; 0, 120]
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Integer Delay"
+	  SID			  "815"
+	  Ports			  [1, 1]
+	  Position		  [1015, 188, 1050, 222]
+	  ZOrder		  -7
+	  ShowName		  off
+	  InputPortMap		  "u0"
+	}
+	Block {
+	  BlockType		  DiscreteFilter
+	  Name			  "Secondary path model"
+	  SID			  "830"
+	  Ports			  [1, 1]
+	  Position		  [315, 127, 375, 163]
+	  ZOrder		  -8
+	  BackgroundColor	  "orange"
+	  InputPortMap		  "u0"
+	  Numerator		  "B"
+	  Denominator		  "A"
+	  SampleTime		  "Ts"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  SID			  "471"
+	  Ports			  [2, 1]
+	  Position		  [405, 135, 425, 155]
+	  ZOrder		  -9
+	  ShowName		  off
+	  Inputs		  "+-|"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  SID			  "789"
+	  Ports			  [2, 1]
+	  Position		  [1080, 195, 1100, 215]
+	  ZOrder		  -10
+	  ShowName		  off
+	  Inputs		  "+-|"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch"
+	  SID			  "1366"
+	  Position		  [75, 305, 105, 335]
+	  ZOrder		  -11
+	  BlockMirror		  on
+	  NameLocation		  "top"
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace4"
+	  SID			  "756"
+	  Ports			  [1]
+	  Position		  [605, 105, 665, 135]
+	  ZOrder		  -12
+	  NameLocation		  "top"
+	  ShowName		  off
+	  VariableName		  "theta_hat"
+	  MaxDataPoints		  "inf"
+	  SaveFormat		  "Structure With Time"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace6"
+	  SID			  "776"
+	  Ports			  [1]
+	  Position		  [605, 135, 665, 165]
+	  ZOrder		  -13
+	  NameLocation		  "top"
+	  ShowName		  off
+	  VariableName		  "alpha_rt"
+	  MaxDataPoints		  "inf"
+	  SaveFormat		  "Structure With Time"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "adap_init.alpha_end1"
+	  SID			  "1319"
+	  Position		  [560, 81, 675, 99]
+	  ZOrder		  -14
+	  ShowName		  off
+	  Value			  "adap_init.alpha_pre"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "dist. ID"
+	  SID			  "777"
+	  Ports			  [1, 4]
+	  Position		  [470, 109, 540, 176]
+	  ZOrder		  -15
+	  BackgroundColor	  "orange"
+	  NameLocation		  "top"
+	  RequestExecContextInheritance	off
+	  System {
+	    Name		    "dist. ID"
+	    Location		    [0, 0, 1920, 1080]
+	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
+	    Open		    on
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "111"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "d hat"
+	      SID		      "778"
+	      Position		      [690, 78, 720, 92]
+	      ZOrder		      -1
+	      BlockMirror	      on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      SID		      "1350"
+	      Position		      [710, 549, 805, 571]
+	      ZOrder		      -2
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      ShowName		      off
+	      Value		      "distID.THRESHOLD"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Embedded\nMATLAB Function1"
+	      SID		      "1306"
+	      Ports		      [11, 4]
+	      Position		      [195, 78, 315, 322]
+	      ZOrder		      -3
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      ErrorFcn		      "Stateflow.Translate.translate"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      TreatAsAtomicUnit	      on
+	      RequestExecContextInheritance off
+	      SFBlockType	      "MATLAB Function"
+	      System {
+		Name			"Embedded\nMATLAB Function1"
+		Location		[219, 337, 814, 775]
+		SystemRect		[0.000000, 0.000000, 0.000000, 0.000000]
+		Open			off
+		PortBlocksUseCompactNotation off
+		SetExecutionDomain	off
+		ExecutionDomainType	"Deduce"
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SIDHighWatermark	"29"
+		SIDPrevWatermark	"24"
+		SimulinkSubDomain	"Simulink"
+		Block {
+		  BlockType		  Inport
+		  Name			  "xk"
+		  SID			  "1306::1"
+		  Position		  [20, 101, 40, 119]
+		  ZOrder		  -1
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "SW"
+		  SID			  "1306::3"
+		  Position		  [20, 136, 40, 154]
+		  ZOrder		  -2
+		  Port			  "2"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "F_init"
+		  SID			  "1306::6"
+		  Position		  [20, 171, 40, 189]
+		  ZOrder		  -3
+		  Port			  "3"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "theta_init"
+		  SID			  "1306::7"
+		  Position		  [20, 206, 40, 224]
+		  ZOrder		  -4
+		  Port			  "4"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "lambda_init"
+		  SID			  "1306::8"
+		  Position		  [20, 246, 40, 264]
+		  ZOrder		  -5
+		  Port			  "5"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "lambda_end"
+		  SID			  "1306::9"
+		  Position		  [20, 281, 40, 299]
+		  ZOrder		  -6
+		  Port			  "6"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "SW_lambda"
+		  SID			  "1306::10"
+		  Position		  [20, 316, 40, 334]
+		  ZOrder		  -7
+		  Port			  "7"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "alpha_init"
+		  SID			  "1306::21"
+		  Position		  [20, 351, 40, 369]
+		  ZOrder		  -8
+		  Port			  "8"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "alpha_end"
+		  SID			  "1306::22"
+		  Position		  [20, 386, 40, 404]
+		  ZOrder		  -9
+		  Port			  "9"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "SW_2Stage"
+		  SID			  "1306::24"
+		  Position		  [20, 426, 40, 444]
+		  ZOrder		  -10
+		  Port			  "10"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "lambda_gain"
+		  SID			  "1306::26"
+		  Position		  [20, 461, 40, 479]
+		  ZOrder		  -11
+		  Port			  "11"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  SID			  "1306::28"
+		  Ports			  [1, 1]
+		  Position		  [270, 280, 320, 320]
+		  ZOrder		  2
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  S-Function
+		  Name			  " SFunction "
+		  SID			  "1306::27"
+		  Tag			  "Stateflow S-Function 10"
+		  Ports			  [11, 5]
+		  Position		  [180, 95, 230, 335]
+		  ZOrder		  1
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[11 5]"
+		  SFunctionDeploymentMode off
+		  EnableBusSupport	  on
+		  SFcnIsStateOwnerBlock	  off
+		  Port {
+		    PortNumber		    2
+		    Name		    "para_est"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "f_factor"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "alpha_rt"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "SW_NF98"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  SID			  "1306::29"
+		  Position		  [460, 291, 480, 309]
+		  ZOrder		  3
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "para_est"
+		  SID			  "1306::15"
+		  Position		  [460, 101, 480, 119]
+		  ZOrder		  -15
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "f_factor"
+		  SID			  "1306::16"
+		  Position		  [460, 136, 480, 154]
+		  ZOrder		  -16
+		  Port			  "2"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "alpha_rt"
+		  SID			  "1306::23"
+		  Position		  [460, 171, 480, 189]
+		  ZOrder		  -17
+		  Port			  "3"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "SW_NF98"
+		  SID			  "1306::25"
+		  Position		  [460, 206, 480, 224]
+		  ZOrder		  -18
+		  Port			  "4"
+		}
+		Line {
+		  ZOrder		  18
+		  SrcBlock		  "xk"
+		  SrcPort		  1
+		  Points		  [65, 0; 0, 5]
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  19
+		  SrcBlock		  "SW"
+		  SrcPort		  1
+		  Points		  [65, 0; 0, -10]
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  20
+		  SrcBlock		  "F_init"
+		  SrcPort		  1
+		  Points		  [65, 0; 0, -25]
+		  DstBlock		  " SFunction "
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  21
+		  SrcBlock		  "theta_init"
+		  SrcPort		  1
+		  Points		  [31, 0; 0, -40]
+		  DstBlock		  " SFunction "
+		  DstPort		  4
+		}
+		Line {
+		  ZOrder		  22
+		  SrcBlock		  "lambda_init"
+		  SrcPort		  1
+		  Points		  [83, 0; 0, -60]
+		  DstBlock		  " SFunction "
+		  DstPort		  5
+		}
+		Line {
+		  ZOrder		  23
+		  SrcBlock		  "lambda_end"
+		  SrcPort		  1
+		  Points		  [57, 0; 0, -75]
+		  DstBlock		  " SFunction "
+		  DstPort		  6
+		}
+		Line {
+		  ZOrder		  24
+		  SrcBlock		  "SW_lambda"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, -90]
+		  DstBlock		  " SFunction "
+		  DstPort		  7
+		}
+		Line {
+		  ZOrder		  25
+		  SrcBlock		  "alpha_init"
+		  SrcPort		  1
+		  Points		  [109, 0; 0, -105]
+		  DstBlock		  " SFunction "
+		  DstPort		  8
+		}
+		Line {
+		  ZOrder		  26
+		  SrcBlock		  "alpha_end"
+		  SrcPort		  1
+		  Points		  [24, 0; 0, -120]
+		  DstBlock		  " SFunction "
+		  DstPort		  9
+		}
+		Line {
+		  ZOrder		  27
+		  SrcBlock		  "SW_2Stage"
+		  SrcPort		  1
+		  Points		  [72, 0; 0, -140]
+		  DstBlock		  " SFunction "
+		  DstPort		  10
+		}
+		Line {
+		  ZOrder		  28
+		  SrcBlock		  "lambda_gain"
+		  SrcPort		  1
+		  Points		  [54, 0; 0, -155]
+		  DstBlock		  " SFunction "
+		  DstPort		  11
+		}
+		Line {
+		  Name			  "para_est"
+		  ZOrder		  29
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  Points		  [6, 0; 0, -55]
+		  DstBlock		  "para_est"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "f_factor"
+		  ZOrder		  30
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  3
+		  Points		  [12, 0; 0, -70]
+		  DstBlock		  "f_factor"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "alpha_rt"
+		  ZOrder		  31
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  4
+		  Points		  [19, 0; 0, -85]
+		  DstBlock		  "alpha_rt"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "SW_NF98"
+		  ZOrder		  32
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  5
+		  Points		  [25, 0; 0, -100]
+		  DstBlock		  "SW_NF98"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  33
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  34
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  Points		  [0, 185]
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Embedded\nMATLAB Function2"
+	      SID		      "1351"
+	      Ports		      [2, 2]
+	      Position		      [495, 515, 615, 575]
+	      ZOrder		      -4
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      LibraryVersion	      "1.30"
+	      ShowPortLabels	      "SignalName"
+	      ErrorFcn		      "Stateflow.Translate.translate"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      TreatAsAtomicUnit	      on
+	      RequestExecContextInheritance off
+	      SFBlockType	      "MATLAB Function"
+	      System {
+		Name			"Embedded\nMATLAB Function2"
+		Location		[219, 337, 814, 775]
+		SystemRect		[0.000000, 0.000000, 0.000000, 0.000000]
+		Open			off
+		PortBlocksUseCompactNotation off
+		SetExecutionDomain	off
+		ExecutionDomainType	"Deduce"
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SIDHighWatermark	"16"
+		SIDPrevWatermark	"13"
+		SimulinkSubDomain	"Simulink"
+		Block {
+		  BlockType		  Inport
+		  Name			  "u"
+		  SID			  "1351::1"
+		  Position		  [20, 101, 40, 119]
+		  ZOrder		  -1
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "THRESHOLD"
+		  SID			  "1351::10"
+		  Position		  [20, 136, 40, 154]
+		  ZOrder		  -2
+		  Port			  "2"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  SID			  "1351::15"
+		  Ports			  [1, 1]
+		  Position		  [270, 230, 320, 270]
+		  ZOrder		  2
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  S-Function
+		  Name			  " SFunction "
+		  SID			  "1351::14"
+		  Tag			  "Stateflow S-Function 3"
+		  Ports			  [2, 3]
+		  Position		  [180, 100, 230, 180]
+		  ZOrder		  1
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[2 3]"
+		  SFunctionDeploymentMode off
+		  EnableBusSupport	  on
+		  SFcnIsStateOwnerBlock	  off
+		  Port {
+		    PortNumber		    2
+		    Name		    "y"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "SW"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  SID			  "1351::16"
+		  Position		  [460, 241, 480, 259]
+		  ZOrder		  3
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "y"
+		  SID			  "1351::5"
+		  Position		  [460, 101, 480, 119]
+		  ZOrder		  -6
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "SW"
+		  SID			  "1351::13"
+		  Position		  [460, 136, 480, 154]
+		  ZOrder		  -7
+		  Port			  "2"
+		}
+		Line {
+		  ZOrder		  7
+		  SrcBlock		  "u"
+		  SrcPort		  1
+		  Points		  [87, 0; 0, 10]
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  8
+		  SrcBlock		  "THRESHOLD"
+		  SrcPort		  1
+		  Points		  [53, 0; 0, 15]
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "y"
+		  ZOrder		  9
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  Points		  [74, 0; 0, -30]
+		  DstBlock		  "y"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "SW"
+		  ZOrder		  10
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  3
+		  Points		  [147, 0; 0, -20]
+		  DstBlock		  "SW"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  11
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  12
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  Points		  [16, 0; 0, 135]
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      ManualSwitch
+	      Name		      "Manual Switch"
+	      SID		      "1361"
+	      Position		      [537, 195, 573, 225]
+	      ZOrder		      -5
+	      BlockRotation	      270
+	      NameLocation	      "right"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product2"
+	      SID		      "750"
+	      Ports		      [2, 1]
+	      Position		      [585, 277, 615, 308]
+	      ZOrder		      -6
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      ShowName		      off
+	      RndMeth		      "Zero"
+	    }
+	    Block {
+	      BlockType		      Step
+	      Name		      "Step1"
+	      SID		      "754"
+	      Position		      [635, 274, 665, 296]
+	      ZOrder		      -7
+	      BlockMirror	      on
+	      ShowName		      off
+	      Time		      "t_AdapOn"
+	      SampleTime	      "Ts"
+	    }
+	    Block {
+	      BlockType		      Step
+	      Name		      "Step2"
+	      SID		      "755"
+	      Position		      [670, 289, 700, 311]
+	      ZOrder		      -8
+	      BlockMirror	      on
+	      ShowName		      off
+	      Time		      "t_AdapOff"
+	      Before		      "1"
+	      After		      "0"
+	      SampleTime	      "Ts"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace2"
+	      SID		      "1370"
+	      Ports		      [1]
+	      Position		      [105, 157, 170, 183]
+	      ZOrder		      -9
+	      BlockMirror	      on
+	      ShowName		      off
+	      VariableName	      "Ffactor"
+	      MaxDataPoints	      "inf"
+	      SaveFormat	      "Structure With Time"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace5"
+	      SID		      "1304"
+	      Ports		      [1]
+	      Position		      [490, 30, 550, 60]
+	      ZOrder		      -10
+	      ShowName		      off
+	      VariableName	      "y3"
+	      MaxDataPoints	      "inf"
+	      SaveFormat	      "Structure With Time"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "adap_init.F 1"
+	      SID		      "1308"
+	      Position		      [355, 123, 470, 147]
+	      ZOrder		      -11
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      ShowName		      off
+	      Value		      "adap_init.F "
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "adap_init.SW_lambda1"
+	      SID		      "1309"
+	      Position		      [355, 220, 470, 250]
+	      ZOrder		      -12
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      ShowName		      off
+	      Value		      "adap_init.SW_lambda"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "adap_init.alpha_end1"
+	      SID		      "1307"
+	      Position		      [355, 296, 470, 324]
+	      ZOrder		      -13
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      ShowName		      off
+	      Value		      "adap_init.SW_2Stage"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "adap_init.alpha_end2"
+	      SID		      "1310"
+	      Position		      [355, 271, 470, 299]
+	      ZOrder		      -14
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      ShowName		      off
+	      Value		      "adap_init.alpha_end"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "adap_init.alpha_end3"
+	      SID		      "1371"
+	      Position		      [355, 321, 470, 349]
+	      ZOrder		      -15
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      ShowName		      off
+	      Value		      "adap_init.lambda_gain"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "adap_init.alpha_init1"
+	      SID		      "1311"
+	      Position		      [355, 247, 470, 273]
+	      ZOrder		      -16
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      ShowName		      off
+	      Value		      "adap_init.alpha_init"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "adap_init.lambda_end1"
+	      SID		      "1312"
+	      Position		      [355, 196, 470, 224]
+	      ZOrder		      -17
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      ShowName		      off
+	      Value		      "adap_init.lambda_end"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "adap_init.lambda_init1"
+	      SID		      "1313"
+	      Position		      [355, 172, 470, 198]
+	      ZOrder		      -18
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      ShowName		      off
+	      Value		      "adap_init.lambda_init"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "adap_init.theta1"
+	      SID		      "1314"
+	      Position		      [355, 147, 470, 173]
+	      ZOrder		      -19
+	      BlockMirror	      on
+	      NameLocation	      "top"
+	      ShowName		      off
+	      Value		      "adap_init.theta"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "denoise filter"
+	      SID		      "765"
+	      Ports		      [1, 1]
+	      Position		      [570, 68, 655, 102]
+	      ZOrder		      -20
+	      BlockMirror	      on
+	      DropShadow	      on
+	      NameLocation	      "top"
+	      LibraryVersion	      "2.3"
+	      SourceBlock	      "cstblocks/LTI System"
+	      SourceType	      "LTI Block"
+	      SourceProductBaseCode   "CT"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      ContentPreviewEnabled   off
+	      sys		      "denoise_filter"
+	      IC		      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "theta"
+	      SID		      "779"
+	      Position		      [55, 103, 85, 117]
+	      ZOrder		      -21
+	      BlockMirror	      on
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "SW_NF"
+	      SID		      "780"
+	      Position		      [55, 283, 85, 297]
+	      ZOrder		      -22
+	      BlockMirror	      on
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "alpha"
+	      SID		      "781"
+	      Position		      [55, 223, 85, 237]
+	      ZOrder		      -23
+	      BlockMirror	      on
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "sw"
+	      SID		      "782"
+	      Position		      [370, 88, 400, 102]
+	      ZOrder		      -24
+	      BlockMirror	      on
+	      Port		      "4"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "denoise filter"
+	      SrcPort		      1
+	      Points		      [-5, 0]
+	      Branch {
+		ZOrder			2
+		Points			[-110, 0]
+		Branch {
+		  ZOrder		  3
+		  Points		  [0, -40]
+		  DstBlock		  "To Workspace5"
+		  DstPort		  1
+		}
+		Branch {
+		  ZOrder		  4
+		  Points		  [-120, 0]
+		  DstBlock		  "Embedded\nMATLAB Function1"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		ZOrder			5
+		Points			[0, 75; 170, 0; 0, 370]
+		DstBlock		"Embedded\nMATLAB Function2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      6
+	      SrcBlock		      "Step2"
+	      SrcPort		      1
+	      DstBlock		      "Product2"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      7
+	      SrcBlock		      "Step1"
+	      SrcPort		      1
+	      DstBlock		      "Product2"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "d hat"
+	      SrcPort		      1
+	      DstBlock		      "denoise filter"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "adap_init.alpha_end1"
+	      SrcPort		      1
+	      Points		      [-20, 0]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      10
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "adap_init.F 1"
+	      SrcPort		      1
+	      Points		      [-20, 0]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "adap_init.theta1"
+	      SrcPort		      1
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      4
+	    }
+	    Line {
+	      ZOrder		      12
+	      SrcBlock		      "adap_init.lambda_init1"
+	      SrcPort		      1
+	      Points		      [-20, 0]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      5
+	    }
+	    Line {
+	      ZOrder		      13
+	      SrcBlock		      "adap_init.lambda_end1"
+	      SrcPort		      1
+	      Points		      [-20, 0]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      6
+	    }
+	    Line {
+	      ZOrder		      14
+	      SrcBlock		      "adap_init.SW_lambda1"
+	      SrcPort		      1
+	      Points		      [-20, 0]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      7
+	    }
+	    Line {
+	      ZOrder		      15
+	      SrcBlock		      "adap_init.alpha_init1"
+	      SrcPort		      1
+	      Points		      [-20, 0]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      8
+	    }
+	    Line {
+	      ZOrder		      16
+	      SrcBlock		      "adap_init.alpha_end2"
+	      SrcPort		      1
+	      Points		      [-20, 0]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      9
+	    }
+	    Line {
+	      ZOrder		      17
+	      SrcBlock		      "Embedded\nMATLAB Function1"
+	      SrcPort		      1
+	      DstBlock		      "theta"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      18
+	      SrcBlock		      "Embedded\nMATLAB Function1"
+	      SrcPort		      3
+	      DstBlock		      "alpha"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      19
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      DstBlock		      "Embedded\nMATLAB Function2"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      20
+	      SrcBlock		      "Embedded\nMATLAB Function2"
+	      SrcPort		      2
+	      Points		      [-40, 0; 0, -45; -40, 0; 0, -140; 95, 0; 0, -135]
+	      DstBlock		      "Manual Switch"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      21
+	      SrcBlock		      "Product2"
+	      SrcPort		      1
+	      Points		      [-15, 0]
+	      DstBlock		      "Manual Switch"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      22
+	      SrcBlock		      "Manual Switch"
+	      SrcPort		      1
+	      Points		      [0, -70; -70, 0]
+	      Branch {
+		ZOrder			23
+		DstBlock		"Embedded\nMATLAB Function1"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			24
+		Points			[0, -25]
+		DstBlock		"sw"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      25
+	      SrcBlock		      "Embedded\nMATLAB Function1"
+	      SrcPort		      4
+	      DstBlock		      "SW_NF"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      26
+	      SrcBlock		      "Embedded\nMATLAB Function1"
+	      SrcPort		      2
+	      DstBlock		      "To Workspace2"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      27
+	      SrcBlock		      "adap_init.alpha_end3"
+	      SrcPort		      1
+	      Points		      [-20, 0]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      11
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "stable P inverse"
+	  SID			  "769"
+	  Ports			  [1, 1]
+	  Position		  [1015, 73, 1070, 97]
+	  ZOrder		  -16
+	  DropShadow		  on
+	  LibraryVersion	  "2.3"
+	  SourceBlock		  "cstblocks/LTI System"
+	  SourceType		  "LTI Block"
+	  SourceProductBaseCode	  "CT"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  ContentPreviewEnabled	  off
+	  sys			  "P_inv"
+	  IC			  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "c"
+	  SID			  "846"
+	  Position		  [15, 273, 45, 287]
+	  ZOrder		  -17
+	  BlockMirror		  on
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  Points		  [0, 50]
+	  DstBlock		  "Embedded\nMATLAB Function3"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "stable P inverse"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "Integer Delay"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  4
+	  SrcBlock		  "dist. ID"
+	  SrcPort		  4
+	  Points		  [10, 0]
+	  Branch {
+	    ZOrder		    5
+	    Points		    [0, 30]
+	    Branch {
+	      ZOrder		      6
+	      Points		      [0, 75; -30, 0]
+	      Branch {
+		ZOrder			7
+		DstBlock		"Embedded\nMATLAB Function3"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			8
+		DstBlock		"Embedded\nMATLAB Function1"
+		DstPort			2
+	      }
+	    }
+	    Branch {
+	      ZOrder		      9
+	      DstBlock		      "Embedded\nMATLAB Function7"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    ZOrder		    10
+	    Points		    [0, -90]
+	    DstBlock		    "Embedded\nMATLAB Function2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  11
+	  SrcBlock		  "dist. ID"
+	  SrcPort		  3
+	  Points		  [20, 0]
+	  Branch {
+	    ZOrder		    12
+	    DstBlock		    "To Workspace6"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    13
+	    Points		    [0, 135; -40, 0]
+	    Branch {
+	      ZOrder		      14
+	      DstBlock		      "Embedded\nMATLAB Function3"
+	      DstPort		      3
+	    }
+	    Branch {
+	      ZOrder		      15
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Line {
+	  ZOrder		  16
+	  SrcBlock		  "dist. ID"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    ZOrder		    17
+	    DstBlock		    "To Workspace4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    18
+	    Points		    [0, 105]
+	    Branch {
+	      ZOrder		      19
+	      Points		      [0, 75; -50, 0]
+	      Branch {
+		ZOrder			20
+		DstBlock		"Embedded\nMATLAB Function3"
+		DstPort			4
+	      }
+	      Branch {
+		ZOrder			21
+		DstBlock		"Embedded\nMATLAB Function1"
+		DstPort			4
+	      }
+	    }
+	    Branch {
+	      ZOrder		      22
+	      DstBlock		      "Embedded\nMATLAB Function7"
+	      DstPort		      4
+	    }
+	  }
+	  Branch {
+	    ZOrder		    23
+	    Points		    [0, -15]
+	    DstBlock		    "Embedded\nMATLAB Function2"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  ZOrder		  24
+	  SrcBlock		  "Secondary path model"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  25
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "dist. ID"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  26
+	  SrcBlock		  "y"
+	  SrcPort		  1
+	  Points		  [0, 15]
+	  Branch {
+	    ZOrder		    27
+	    DstBlock		    "Sum1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    28
+	    DstBlock		    "Embedded\nMATLAB Function2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  29
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  Points		  [0, 15]
+	  Branch {
+	    ZOrder		    30
+	    Points		    [0, 35]
+	    DstBlock		    "Embedded\nMATLAB Function7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    31
+	    DstBlock		    "Secondary path model"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  32
+	  SrcBlock		  "Embedded\nMATLAB Function3"
+	  SrcPort		  1
+	  Points		  [-20, 0]
+	  DstBlock		  "Embedded\nMATLAB Function1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  33
+	  SrcBlock		  "Embedded\nMATLAB Function7"
+	  SrcPort		  1
+	  DstBlock		  "Integer Delay"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  34
+	  SrcBlock		  "Embedded\nMATLAB Function2"
+	  SrcPort		  1
+	  DstBlock		  "stable P inverse"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  35
+	  SrcBlock		  "adap_init.alpha_end1"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    ZOrder		    36
+	    DstBlock		    "Embedded\nMATLAB Function2"
+	    DstPort		    3
+	  }
+	  Branch {
+	    ZOrder		    37
+	    Points		    [0, 120]
+	    DstBlock		    "Embedded\nMATLAB Function7"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  ZOrder		  38
+	  SrcBlock		  "dist. ID"
+	  SrcPort		  2
+	  Points		  [195, 0; 0, 185]
+	  DstBlock		  "Switch"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  39
+	  SrcBlock		  "Embedded\nMATLAB Function1"
+	  SrcPort		  1
+	  Points		  [-10, 0]
+	  Branch {
+	    ZOrder		    40
+	    Points		    [0, 50]
+	    DstBlock		    "Switch"
+	    DstPort		    3
+	  }
+	  Branch {
+	    ZOrder		    41
+	    Points		    [-105, 0]
+	    DstBlock		    "Switch"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  42
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  Points		  [-5, 0; 0, -40]
+	  DstBlock		  "c"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
       Name		      "Disturbance Generator"
       SID		      "22"
       Ports		      [0, 1]
@@ -1680,7 +3790,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    30
+	    $ObjectID		    34
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "sinusoidal disturbances block"
 	    Help		    "With this simulink block, one can define his sinusoidal disturbances.\nEnter\nLevel allow us to define"
@@ -1695,56 +3805,56 @@ Model {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      8
 	      Object {
-		$ObjectID		31
+		$ObjectID		35
 		Type			"edit"
 		Name			"level"
 		Prompt			"Level (n for n sinusoids)"
 		Value			"2"
 	      }
 	      Object {
-		$ObjectID		32
+		$ObjectID		36
 		Type			"edit"
 		Name			"freq1"
 		Prompt			"Vector containing first disturbance frequencies sequence [f1;f2;f3] (put 0 if not needed) (Hz)"
 		Value			"dist_seq1"
 	      }
 	      Object {
-		$ObjectID		33
+		$ObjectID		37
 		Type			"edit"
 		Name			"freq2"
 		Prompt			"Vector containing second disturbance frequencies sequence [f1;f2;f3] (put 0 if not needed) (Hz)"
 		Value			"dist_seq2"
 	      }
 	      Object {
-		$ObjectID		34
+		$ObjectID		38
 		Type			"edit"
 		Name			"freq3"
 		Prompt			"Vector containing third disturbance frequencies sequence [f1;f2;f3] (put 0 if not needed) (Hz)"
 		Value			"dist_seq3"
 	      }
 	      Object {
-		$ObjectID		35
+		$ObjectID		39
 		Type			"edit"
 		Name			"t0"
 		Prompt			"Start disturbances time (sec)"
 		Value			"t_NBon"
 	      }
 	      Object {
-		$ObjectID		36
+		$ObjectID		40
 		Type			"edit"
 		Name			"T"
 		Prompt			"Time delay between two disturbances (sec)"
 		Value			"t_NBdur"
 	      }
 	      Object {
-		$ObjectID		37
+		$ObjectID		41
 		Type			"edit"
 		Name			"Amp"
 		Prompt			"Amplitude"
 		Value			"0.1"
 	      }
 	      Object {
-		$ObjectID		38
+		$ObjectID		42
 		Type			"edit"
 		Name			"Te"
 		Prompt			"Sample time (put 0)"
@@ -3756,7 +5866,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    39
+	    $ObjectID		    43
 	    $ClassName		    "Simulink.Mask"
 	    Display		    "disp('Chirp disturbance')"
 	  }
@@ -3800,70 +5910,70 @@ Model {
 	      RequestExecContextInheritance off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		40
+		$ObjectID		44
 		$ClassName		"Simulink.Mask"
 		Display			"disp ('Chirp Generator')"
 		Array {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  9
 		  Object {
-		    $ObjectID		    41
+		    $ObjectID		    45
 		    Type		    "edit"
 		    Name		    "n"
 		    Prompt		    "level"
 		    Value		    "chirp_dist.level"
 		  }
 		  Object {
-		    $ObjectID		    42
+		    $ObjectID		    46
 		    Type		    "edit"
 		    Name		    "Fbeg"
 		    Prompt		    "Initial frequency sequence (vector Fbeg) [Hz]"
 		    Value		    "chirp_dist.para1"
 		  }
 		  Object {
-		    $ObjectID		    43
+		    $ObjectID		    47
 		    Type		    "edit"
 		    Name		    "Ffin"
 		    Prompt		    "Final frequency sequence (vector Ffin) [Hz]"
 		    Value		    "chirp_dist.para2"
 		  }
 		  Object {
-		    $ObjectID		    44
+		    $ObjectID		    48
 		    Type		    "edit"
 		    Name		    "amp"
 		    Prompt		    "Amplitude (Amp)"
 		    Value		    "0.1"
 		  }
 		  Object {
-		    $ObjectID		    45
+		    $ObjectID		    49
 		    Type		    "edit"
 		    Name		    "T0"
 		    Prompt		    "Instant of the initial frequency sequence injection 'T0'"
 		    Value		    "chirp_dist.freq1_init_time"
 		  }
 		  Object {
-		    $ObjectID		    46
+		    $ObjectID		    50
 		    Type		    "edit"
 		    Name		    "T1"
 		    Prompt		    "instant to run a chirp 'T1'"
 		    Value		    "chirp_dist.chirp_init_time"
 		  }
 		  Object {
-		    $ObjectID		    47
+		    $ObjectID		    51
 		    Type		    "edit"
 		    Name		    "Tb"
 		    Prompt		    "Transition time between  Fbeg and Ffin ('Tb') \"slope=(Ffin-Fbeg)/Tb\""
 		    Value		    "chirp_dist.chirp_dur_time"
 		  }
 		  Object {
-		    $ObjectID		    48
+		    $ObjectID		    52
 		    Type		    "edit"
 		    Name		    "T2"
 		    Prompt		    "Time duration of the final frequency sequence Ffin 'T2'"
 		    Value		    "chirp_dist.freq2_dur_time"
 		  }
 		  Object {
-		    $ObjectID		    49
+		    $ObjectID		    53
 		    Type		    "edit"
 		    Name		    "Te"
 		    Prompt		    "Sample time"
@@ -4519,7 +6629,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Plant"
-	Location		[147, 333, 1106, 1003]
+	Location		[0, 0, 1920, 1080]
 	SystemRect		[0.000000, 0.000000, 0.000000, 0.000000]
 	Open			off
 	PortBlocksUseCompactNotation off
@@ -4566,7 +6676,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    50
+	    $ObjectID		    54
 	    $ClassName		    "Simulink.Mask"
 	    Description		    "load bruitbench before launching simulator"
 	    Initialization	    "load bruitbench"
@@ -4647,7 +6757,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "SAAI "
-	    Location		    [788, 477, 1747, 1147]
+	    Location		    [0, 0, 1920, 1080]
 	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
 	    Open		    off
 	    PortBlocksUseCompactNotation off
@@ -4886,7 +6996,7 @@ Model {
       RequestExecContextInheritance off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		51
+	$ObjectID		55
 	$ClassName		"Simulink.Mask"
 	Display			"disp('Controller')"
       }
@@ -4989,2069 +7099,6 @@ Model {
       Floating		      off
     }
     Block {
-      BlockType		      SubSystem
-      Name		      "Subsystem"
-      SID		      "842"
-      Ports		      [2, 1]
-      Position		      [565, 255, 625, 295]
-      ZOrder		      -11
-      BlockRotation	      270
-      BlockMirror	      on
-      BackgroundColor	      "magenta"
-      NameLocation	      "left"
-      RequestExecContextInheritance off
-      System {
-	Name			"Subsystem"
-	Location		[604, 44, 1920, 887]
-	SystemRect		[0.000000, 0.000000, 0.000000, 0.000000]
-	Open			off
-	PortBlocksUseCompactNotation off
-	SetExecutionDomain	off
-	ExecutionDomainType	"Deduce"
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"usletter"
-	PaperUnits		"inches"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"150"
-	SimulinkSubDomain	"Simulink"
-	Block {
-	  BlockType		  Inport
-	  Name			  "u"
-	  SID			  "845"
-	  Position		  [255, 110, 285, 125]
-	  ZOrder		  -1
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NameLocation		  "right"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "y"
-	  SID			  "843"
-	  Position		  [400, 25, 430, 40]
-	  ZOrder		  -2
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NameLocation		  "right"
-	  Port			  "2"
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Embedded\nMATLAB Function1"
-	  SID			  "814"
-	  Ports			  [4, 1]
-	  Position		  [240, 245, 355, 310]
-	  ZOrder		  -3
-	  BlockMirror		  on
-	  BackgroundColor	  "lightBlue"
-	  NameLocation		  "top"
-	  ShowName		  off
-	  ErrorFcn		  "Stateflow.Translate.translate"
-	  PermitHierarchicalResolution "ExplicitOnly"
-	  TreatAsAtomicUnit	  on
-	  RequestExecContextInheritance	off
-	  SFBlockType		  "MATLAB Function"
-	  System {
-	    Name		    "Embedded\nMATLAB Function1"
-	    Location		    [219, 337, 814, 775]
-	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
-	    Open		    off
-	    PortBlocksUseCompactNotation off
-	    SetExecutionDomain	    off
-	    ExecutionDomainType	    "Deduce"
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "23"
-	    SIDPrevWatermark	    "20"
-	    SimulinkSubDomain	    "Simulink"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "xk_ori"
-	      SID		      "814::2"
-	      Position		      [20, 101, 40, 119]
-	      ZOrder		      -1
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "SW"
-	      SID		      "814::3"
-	      Position		      [20, 136, 40, 154]
-	      ZOrder		      -2
-	      Port		      "2"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "alpha"
-	      SID		      "814::4"
-	      Position		      [20, 171, 40, 189]
-	      ZOrder		      -3
-	      Port		      "3"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "theta"
-	      SID		      "814::6"
-	      Position		      [20, 206, 40, 224]
-	      ZOrder		      -4
-	      Port		      "4"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      " Demux "
-	      SID		      "814::22"
-	      Ports		      [1, 1]
-	      Position		      [270, 230, 320, 270]
-	      ZOrder		      2
-	      Outputs		      "1"
-	    }
-	    Block {
-	      BlockType		      S-Function
-	      Name		      " SFunction "
-	      SID		      "814::21"
-	      Tag		      "Stateflow S-Function 1"
-	      Ports		      [4, 2]
-	      Position		      [180, 102, 230, 203]
-	      ZOrder		      1
-	      FunctionName	      "sf_sfun"
-	      PortCounts	      "[4 2]"
-	      SFunctionDeploymentMode off
-	      EnableBusSupport	      on
-	      SFcnIsStateOwnerBlock   off
-	      Port {
-		PortNumber		2
-		Name			"comp_sig"
-	      }
-	    }
-	    Block {
-	      BlockType		      Terminator
-	      Name		      " Terminator "
-	      SID		      "814::23"
-	      Position		      [460, 241, 480, 259]
-	      ZOrder		      3
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "comp_sig"
-	      SID		      "814::14"
-	      Position		      [460, 101, 480, 119]
-	      ZOrder		      -8
-	    }
-	    Line {
-	      ZOrder		      8
-	      SrcBlock		      "xk_ori"
-	      SrcPort		      1
-	      Points		      [60, 0; 0, 5]
-	      DstBlock		      " SFunction "
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      9
-	      SrcBlock		      "SW"
-	      SrcPort		      1
-	      Points		      [60, 0; 0, -5]
-	      DstBlock		      " SFunction "
-	      DstPort		      2
-	    }
-	    Line {
-	      ZOrder		      10
-	      SrcBlock		      "alpha"
-	      SrcPort		      1
-	      Points		      [65, 0; 0, -15]
-	      DstBlock		      " SFunction "
-	      DstPort		      3
-	    }
-	    Line {
-	      ZOrder		      11
-	      SrcBlock		      "theta"
-	      SrcPort		      1
-	      Points		      [65, 0; 0, -25]
-	      DstBlock		      " SFunction "
-	      DstPort		      4
-	    }
-	    Line {
-	      Name		      "comp_sig"
-	      ZOrder		      12
-	      Labels		      [0, 0]
-	      SrcBlock		      " SFunction "
-	      SrcPort		      2
-	      Points		      [115, 0; 0, -70]
-	      DstBlock		      "comp_sig"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      13
-	      SrcBlock		      " Demux "
-	      SrcPort		      1
-	      DstBlock		      " Terminator "
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      14
-	      SrcBlock		      " SFunction "
-	      SrcPort		      1
-	      Points		      [16, 0; 0, 120]
-	      DstBlock		      " Demux "
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Embedded\nMATLAB Function2"
-	  SID			  "821"
-	  Ports			  [4, 1]
-	  Position		  [700, 50, 815, 115]
-	  ZOrder		  -4
-	  BackgroundColor	  "lightBlue"
-	  ShowName		  off
-	  ErrorFcn		  "Stateflow.Translate.translate"
-	  PermitHierarchicalResolution "ExplicitOnly"
-	  TreatAsAtomicUnit	  on
-	  RequestExecContextInheritance	off
-	  SFBlockType		  "MATLAB Function"
-	  System {
-	    Name		    "Embedded\nMATLAB Function2"
-	    Location		    [219, 337, 814, 775]
-	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
-	    Open		    off
-	    PortBlocksUseCompactNotation off
-	    SetExecutionDomain	    off
-	    ExecutionDomainType	    "Deduce"
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "23"
-	    SIDPrevWatermark	    "20"
-	    SimulinkSubDomain	    "Simulink"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "xk_ori"
-	      SID		      "821::2"
-	      Position		      [20, 101, 40, 119]
-	      ZOrder		      -1
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "SW"
-	      SID		      "821::3"
-	      Position		      [20, 136, 40, 154]
-	      ZOrder		      -2
-	      Port		      "2"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "alpha"
-	      SID		      "821::4"
-	      Position		      [20, 171, 40, 189]
-	      ZOrder		      -3
-	      Port		      "3"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "theta"
-	      SID		      "821::6"
-	      Position		      [20, 206, 40, 224]
-	      ZOrder		      -4
-	      Port		      "4"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      " Demux "
-	      SID		      "821::22"
-	      Ports		      [1, 1]
-	      Position		      [270, 230, 320, 270]
-	      ZOrder		      2
-	      Outputs		      "1"
-	    }
-	    Block {
-	      BlockType		      S-Function
-	      Name		      " SFunction "
-	      SID		      "821::21"
-	      Tag		      "Stateflow S-Function 5"
-	      Ports		      [4, 2]
-	      Position		      [180, 102, 230, 203]
-	      ZOrder		      1
-	      FunctionName	      "sf_sfun"
-	      PortCounts	      "[4 2]"
-	      SFunctionDeploymentMode off
-	      EnableBusSupport	      on
-	      SFcnIsStateOwnerBlock   off
-	      Port {
-		PortNumber		2
-		Name			"output"
-	      }
-	    }
-	    Block {
-	      BlockType		      Terminator
-	      Name		      " Terminator "
-	      SID		      "821::23"
-	      Position		      [460, 241, 480, 259]
-	      ZOrder		      3
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "output"
-	      SID		      "821::14"
-	      Position		      [460, 101, 480, 119]
-	      ZOrder		      -8
-	    }
-	    Line {
-	      ZOrder		      8
-	      SrcBlock		      "xk_ori"
-	      SrcPort		      1
-	      Points		      [60, 0; 0, 5]
-	      DstBlock		      " SFunction "
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      9
-	      SrcBlock		      "SW"
-	      SrcPort		      1
-	      Points		      [60, 0; 0, -5]
-	      DstBlock		      " SFunction "
-	      DstPort		      2
-	    }
-	    Line {
-	      ZOrder		      10
-	      SrcBlock		      "alpha"
-	      SrcPort		      1
-	      Points		      [65, 0; 0, -15]
-	      DstBlock		      " SFunction "
-	      DstPort		      3
-	    }
-	    Line {
-	      ZOrder		      11
-	      SrcBlock		      "theta"
-	      SrcPort		      1
-	      Points		      [65, 0; 0, -25]
-	      DstBlock		      " SFunction "
-	      DstPort		      4
-	    }
-	    Line {
-	      Name		      "output"
-	      ZOrder		      12
-	      Labels		      [0, 0]
-	      SrcBlock		      " SFunction "
-	      SrcPort		      2
-	      Points		      [119, 0; 0, -70]
-	      DstBlock		      "output"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      13
-	      SrcBlock		      " Demux "
-	      SrcPort		      1
-	      DstBlock		      " Terminator "
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      14
-	      SrcBlock		      " SFunction "
-	      SrcPort		      1
-	      Points		      [16, 0; 0, 120]
-	      DstBlock		      " Demux "
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Embedded\nMATLAB Function3"
-	  SID			  "1274"
-	  Ports			  [4, 1]
-	  Position		  [395, 245, 510, 310]
-	  ZOrder		  -5
-	  BlockMirror		  on
-	  BackgroundColor	  "lightBlue"
-	  NameLocation		  "top"
-	  ShowName		  off
-	  ErrorFcn		  "Stateflow.Translate.translate"
-	  PermitHierarchicalResolution "ExplicitOnly"
-	  TreatAsAtomicUnit	  on
-	  RequestExecContextInheritance	off
-	  SFBlockType		  "MATLAB Function"
-	  System {
-	    Name		    "Embedded\nMATLAB Function3"
-	    Location		    [219, 337, 814, 775]
-	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
-	    Open		    off
-	    PortBlocksUseCompactNotation off
-	    SetExecutionDomain	    off
-	    ExecutionDomainType	    "Deduce"
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "23"
-	    SIDPrevWatermark	    "20"
-	    SimulinkSubDomain	    "Simulink"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "xk_ori"
-	      SID		      "1274::2"
-	      Position		      [20, 101, 40, 119]
-	      ZOrder		      -1
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "SW"
-	      SID		      "1274::3"
-	      Position		      [20, 136, 40, 154]
-	      ZOrder		      -2
-	      Port		      "2"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "alpha"
-	      SID		      "1274::4"
-	      Position		      [20, 171, 40, 189]
-	      ZOrder		      -3
-	      Port		      "3"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "theta"
-	      SID		      "1274::6"
-	      Position		      [20, 206, 40, 224]
-	      ZOrder		      -4
-	      Port		      "4"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      " Demux "
-	      SID		      "1274::22"
-	      Ports		      [1, 1]
-	      Position		      [270, 230, 320, 270]
-	      ZOrder		      2
-	      Outputs		      "1"
-	    }
-	    Block {
-	      BlockType		      S-Function
-	      Name		      " SFunction "
-	      SID		      "1274::21"
-	      Tag		      "Stateflow S-Function 2"
-	      Ports		      [4, 2]
-	      Position		      [180, 102, 230, 203]
-	      ZOrder		      1
-	      FunctionName	      "sf_sfun"
-	      PortCounts	      "[4 2]"
-	      SFunctionDeploymentMode off
-	      EnableBusSupport	      on
-	      SFcnIsStateOwnerBlock   off
-	      Port {
-		PortNumber		2
-		Name			"output"
-	      }
-	    }
-	    Block {
-	      BlockType		      Terminator
-	      Name		      " Terminator "
-	      SID		      "1274::23"
-	      Position		      [460, 241, 480, 259]
-	      ZOrder		      3
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "output"
-	      SID		      "1274::14"
-	      Position		      [460, 101, 480, 119]
-	      ZOrder		      -8
-	    }
-	    Line {
-	      ZOrder		      8
-	      SrcBlock		      "xk_ori"
-	      SrcPort		      1
-	      Points		      [60, 0; 0, 5]
-	      DstBlock		      " SFunction "
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      9
-	      SrcBlock		      "SW"
-	      SrcPort		      1
-	      Points		      [60, 0; 0, -5]
-	      DstBlock		      " SFunction "
-	      DstPort		      2
-	    }
-	    Line {
-	      ZOrder		      10
-	      SrcBlock		      "alpha"
-	      SrcPort		      1
-	      Points		      [65, 0; 0, -15]
-	      DstBlock		      " SFunction "
-	      DstPort		      3
-	    }
-	    Line {
-	      ZOrder		      11
-	      SrcBlock		      "theta"
-	      SrcPort		      1
-	      Points		      [65, 0; 0, -25]
-	      DstBlock		      " SFunction "
-	      DstPort		      4
-	    }
-	    Line {
-	      Name		      "output"
-	      ZOrder		      12
-	      Labels		      [0, 0]
-	      SrcBlock		      " SFunction "
-	      SrcPort		      2
-	      Points		      [119, 0; 0, -70]
-	      DstBlock		      "output"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      13
-	      SrcBlock		      " Demux "
-	      SrcPort		      1
-	      DstBlock		      " Terminator "
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      14
-	      SrcBlock		      " SFunction "
-	      SrcPort		      1
-	      Points		      [16, 0; 0, 120]
-	      DstBlock		      " Demux "
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Embedded\nMATLAB Function7"
-	  SID			  "820"
-	  Ports			  [4, 1]
-	  Position		  [700, 170, 815, 235]
-	  ZOrder		  -6
-	  BackgroundColor	  "lightBlue"
-	  ShowName		  off
-	  ErrorFcn		  "Stateflow.Translate.translate"
-	  PermitHierarchicalResolution "ExplicitOnly"
-	  TreatAsAtomicUnit	  on
-	  RequestExecContextInheritance	off
-	  SFBlockType		  "MATLAB Function"
-	  System {
-	    Name		    "Embedded\nMATLAB Function7"
-	    Location		    [219, 337, 814, 775]
-	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
-	    Open		    off
-	    PortBlocksUseCompactNotation off
-	    SetExecutionDomain	    off
-	    ExecutionDomainType	    "Deduce"
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "23"
-	    SIDPrevWatermark	    "20"
-	    SimulinkSubDomain	    "Simulink"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "xk_ori"
-	      SID		      "820::2"
-	      Position		      [20, 101, 40, 119]
-	      ZOrder		      -1
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "SW"
-	      SID		      "820::3"
-	      Position		      [20, 136, 40, 154]
-	      ZOrder		      -2
-	      Port		      "2"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "alpha"
-	      SID		      "820::4"
-	      Position		      [20, 171, 40, 189]
-	      ZOrder		      -3
-	      Port		      "3"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "theta"
-	      SID		      "820::6"
-	      Position		      [20, 206, 40, 224]
-	      ZOrder		      -4
-	      Port		      "4"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      " Demux "
-	      SID		      "820::22"
-	      Ports		      [1, 1]
-	      Position		      [270, 230, 320, 270]
-	      ZOrder		      2
-	      Outputs		      "1"
-	    }
-	    Block {
-	      BlockType		      S-Function
-	      Name		      " SFunction "
-	      SID		      "820::21"
-	      Tag		      "Stateflow S-Function 4"
-	      Ports		      [4, 2]
-	      Position		      [180, 102, 230, 203]
-	      ZOrder		      1
-	      FunctionName	      "sf_sfun"
-	      PortCounts	      "[4 2]"
-	      SFunctionDeploymentMode off
-	      EnableBusSupport	      on
-	      SFcnIsStateOwnerBlock   off
-	      Port {
-		PortNumber		2
-		Name			"output"
-	      }
-	    }
-	    Block {
-	      BlockType		      Terminator
-	      Name		      " Terminator "
-	      SID		      "820::23"
-	      Position		      [460, 241, 480, 259]
-	      ZOrder		      3
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "output"
-	      SID		      "820::14"
-	      Position		      [460, 101, 480, 119]
-	      ZOrder		      -8
-	    }
-	    Line {
-	      ZOrder		      8
-	      SrcBlock		      "xk_ori"
-	      SrcPort		      1
-	      Points		      [60, 0; 0, 5]
-	      DstBlock		      " SFunction "
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      9
-	      SrcBlock		      "SW"
-	      SrcPort		      1
-	      Points		      [60, 0; 0, -5]
-	      DstBlock		      " SFunction "
-	      DstPort		      2
-	    }
-	    Line {
-	      ZOrder		      10
-	      SrcBlock		      "alpha"
-	      SrcPort		      1
-	      Points		      [65, 0; 0, -15]
-	      DstBlock		      " SFunction "
-	      DstPort		      3
-	    }
-	    Line {
-	      ZOrder		      11
-	      SrcBlock		      "theta"
-	      SrcPort		      1
-	      Points		      [65, 0; 0, -25]
-	      DstBlock		      " SFunction "
-	      DstPort		      4
-	    }
-	    Line {
-	      Name		      "output"
-	      ZOrder		      12
-	      Labels		      [0, 0]
-	      SrcBlock		      " SFunction "
-	      SrcPort		      2
-	      Points		      [119, 0; 0, -70]
-	      DstBlock		      "output"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      13
-	      SrcBlock		      " Demux "
-	      SrcPort		      1
-	      DstBlock		      " Terminator "
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      14
-	      SrcBlock		      " SFunction "
-	      SrcPort		      1
-	      Points		      [16, 0; 0, 120]
-	      DstBlock		      " Demux "
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  Delay
-	  Name			  "Integer Delay"
-	  SID			  "815"
-	  Ports			  [1, 1]
-	  Position		  [1015, 188, 1050, 222]
-	  ZOrder		  -7
-	  ShowName		  off
-	  InputPortMap		  "u0"
-	}
-	Block {
-	  BlockType		  DiscreteFilter
-	  Name			  "Secondary path model"
-	  SID			  "830"
-	  Ports			  [1, 1]
-	  Position		  [315, 127, 375, 163]
-	  ZOrder		  -8
-	  BackgroundColor	  "orange"
-	  InputPortMap		  "u0"
-	  Numerator		  "B"
-	  Denominator		  "A"
-	  SampleTime		  "Ts"
-	}
-	Block {
-	  BlockType		  Sum
-	  Name			  "Sum1"
-	  SID			  "471"
-	  Ports			  [2, 1]
-	  Position		  [405, 135, 425, 155]
-	  ZOrder		  -9
-	  ShowName		  off
-	  Inputs		  "+-|"
-	}
-	Block {
-	  BlockType		  Sum
-	  Name			  "Sum2"
-	  SID			  "789"
-	  Ports			  [2, 1]
-	  Position		  [1080, 195, 1100, 215]
-	  ZOrder		  -10
-	  ShowName		  off
-	  Inputs		  "+-|"
-	}
-	Block {
-	  BlockType		  Switch
-	  Name			  "Switch"
-	  SID			  "1366"
-	  Position		  [75, 305, 105, 335]
-	  ZOrder		  -11
-	  BlockMirror		  on
-	  NameLocation		  "top"
-	  Criteria		  "u2 ~= 0"
-	  InputSameDT		  off
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  ToWorkspace
-	  Name			  "To Workspace4"
-	  SID			  "756"
-	  Ports			  [1]
-	  Position		  [605, 105, 665, 135]
-	  ZOrder		  -12
-	  NameLocation		  "top"
-	  ShowName		  off
-	  VariableName		  "theta_hat"
-	  MaxDataPoints		  "inf"
-	  SaveFormat		  "Structure With Time"
-	  SampleTime		  "-1"
-	}
-	Block {
-	  BlockType		  ToWorkspace
-	  Name			  "To Workspace6"
-	  SID			  "776"
-	  Ports			  [1]
-	  Position		  [605, 135, 665, 165]
-	  ZOrder		  -13
-	  NameLocation		  "top"
-	  ShowName		  off
-	  VariableName		  "alpha_rt"
-	  MaxDataPoints		  "inf"
-	  SaveFormat		  "Structure With Time"
-	  SampleTime		  "-1"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "adap_init.alpha_end1"
-	  SID			  "1319"
-	  Position		  [560, 81, 675, 99]
-	  ZOrder		  -14
-	  ShowName		  off
-	  Value			  "adap_init.alpha_pre"
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "dist. ID"
-	  SID			  "777"
-	  Ports			  [1, 4]
-	  Position		  [470, 109, 540, 176]
-	  ZOrder		  -15
-	  BackgroundColor	  "orange"
-	  NameLocation		  "top"
-	  RequestExecContextInheritance	off
-	  System {
-	    Name		    "dist. ID"
-	    Location		    [604, 44, 1920, 887]
-	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
-	    Open		    on
-	    PortBlocksUseCompactNotation off
-	    SetExecutionDomain	    off
-	    ExecutionDomainType	    "Deduce"
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
-	    SimulinkSubDomain	    "Simulink"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "d hat"
-	      SID		      "778"
-	      Position		      [690, 78, 720, 92]
-	      ZOrder		      -1
-	      BlockMirror	      on
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "Constant1"
-	      SID		      "1350"
-	      Position		      [710, 549, 805, 571]
-	      ZOrder		      -2
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      ShowName		      off
-	      Value		      "distID.THRESHOLD"
-	    }
-	    Block {
-	      BlockType		      SubSystem
-	      Name		      "Embedded\nMATLAB Function1"
-	      SID		      "1306"
-	      Ports		      [11, 4]
-	      Position		      [195, 78, 315, 322]
-	      ZOrder		      -3
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      ErrorFcn		      "Stateflow.Translate.translate"
-	      PermitHierarchicalResolution "ExplicitOnly"
-	      TreatAsAtomicUnit	      on
-	      RequestExecContextInheritance off
-	      SFBlockType	      "MATLAB Function"
-	      System {
-		Name			"Embedded\nMATLAB Function1"
-		Location		[219, 337, 814, 775]
-		SystemRect		[0.000000, 0.000000, 0.000000, 0.000000]
-		Open			off
-		PortBlocksUseCompactNotation off
-		SetExecutionDomain	off
-		ExecutionDomainType	"Deduce"
-		ModelBrowserVisibility	off
-		ModelBrowserWidth	200
-		ScreenColor		"white"
-		PaperOrientation	"landscape"
-		PaperPositionMode	"auto"
-		PaperType		"usletter"
-		PaperUnits		"inches"
-		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-		TiledPageScale		1
-		ShowPageBoundaries	off
-		ZoomFactor		"100"
-		SIDHighWatermark	"29"
-		SIDPrevWatermark	"24"
-		SimulinkSubDomain	"Simulink"
-		Block {
-		  BlockType		  Inport
-		  Name			  "xk"
-		  SID			  "1306::1"
-		  Position		  [20, 101, 40, 119]
-		  ZOrder		  -1
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "SW"
-		  SID			  "1306::3"
-		  Position		  [20, 136, 40, 154]
-		  ZOrder		  -2
-		  Port			  "2"
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "F_init"
-		  SID			  "1306::6"
-		  Position		  [20, 171, 40, 189]
-		  ZOrder		  -3
-		  Port			  "3"
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "theta_init"
-		  SID			  "1306::7"
-		  Position		  [20, 206, 40, 224]
-		  ZOrder		  -4
-		  Port			  "4"
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "lambda_init"
-		  SID			  "1306::8"
-		  Position		  [20, 246, 40, 264]
-		  ZOrder		  -5
-		  Port			  "5"
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "lambda_end"
-		  SID			  "1306::9"
-		  Position		  [20, 281, 40, 299]
-		  ZOrder		  -6
-		  Port			  "6"
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "SW_lambda"
-		  SID			  "1306::10"
-		  Position		  [20, 316, 40, 334]
-		  ZOrder		  -7
-		  Port			  "7"
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "alpha_init"
-		  SID			  "1306::21"
-		  Position		  [20, 351, 40, 369]
-		  ZOrder		  -8
-		  Port			  "8"
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "alpha_end"
-		  SID			  "1306::22"
-		  Position		  [20, 386, 40, 404]
-		  ZOrder		  -9
-		  Port			  "9"
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "SW_2Stage"
-		  SID			  "1306::24"
-		  Position		  [20, 426, 40, 444]
-		  ZOrder		  -10
-		  Port			  "10"
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "lambda_gain"
-		  SID			  "1306::26"
-		  Position		  [20, 461, 40, 479]
-		  ZOrder		  -11
-		  Port			  "11"
-		}
-		Block {
-		  BlockType		  Demux
-		  Name			  " Demux "
-		  SID			  "1306::28"
-		  Ports			  [1, 1]
-		  Position		  [270, 280, 320, 320]
-		  ZOrder		  2
-		  Outputs		  "1"
-		}
-		Block {
-		  BlockType		  S-Function
-		  Name			  " SFunction "
-		  SID			  "1306::27"
-		  Tag			  "Stateflow S-Function 10"
-		  Ports			  [11, 5]
-		  Position		  [180, 95, 230, 335]
-		  ZOrder		  1
-		  FunctionName		  "sf_sfun"
-		  PortCounts		  "[11 5]"
-		  SFunctionDeploymentMode off
-		  EnableBusSupport	  on
-		  SFcnIsStateOwnerBlock	  off
-		  Port {
-		    PortNumber		    2
-		    Name		    "para_est"
-		  }
-		  Port {
-		    PortNumber		    3
-		    Name		    "f_factor"
-		  }
-		  Port {
-		    PortNumber		    4
-		    Name		    "alpha_rt"
-		  }
-		  Port {
-		    PortNumber		    5
-		    Name		    "SW_NF98"
-		  }
-		}
-		Block {
-		  BlockType		  Terminator
-		  Name			  " Terminator "
-		  SID			  "1306::29"
-		  Position		  [460, 291, 480, 309]
-		  ZOrder		  3
-		}
-		Block {
-		  BlockType		  Outport
-		  Name			  "para_est"
-		  SID			  "1306::15"
-		  Position		  [460, 101, 480, 119]
-		  ZOrder		  -15
-		}
-		Block {
-		  BlockType		  Outport
-		  Name			  "f_factor"
-		  SID			  "1306::16"
-		  Position		  [460, 136, 480, 154]
-		  ZOrder		  -16
-		  Port			  "2"
-		}
-		Block {
-		  BlockType		  Outport
-		  Name			  "alpha_rt"
-		  SID			  "1306::23"
-		  Position		  [460, 171, 480, 189]
-		  ZOrder		  -17
-		  Port			  "3"
-		}
-		Block {
-		  BlockType		  Outport
-		  Name			  "SW_NF98"
-		  SID			  "1306::25"
-		  Position		  [460, 206, 480, 224]
-		  ZOrder		  -18
-		  Port			  "4"
-		}
-		Line {
-		  ZOrder		  18
-		  SrcBlock		  "xk"
-		  SrcPort		  1
-		  Points		  [65, 0; 0, 5]
-		  DstBlock		  " SFunction "
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  19
-		  SrcBlock		  "SW"
-		  SrcPort		  1
-		  Points		  [65, 0; 0, -10]
-		  DstBlock		  " SFunction "
-		  DstPort		  2
-		}
-		Line {
-		  ZOrder		  20
-		  SrcBlock		  "F_init"
-		  SrcPort		  1
-		  Points		  [65, 0; 0, -25]
-		  DstBlock		  " SFunction "
-		  DstPort		  3
-		}
-		Line {
-		  ZOrder		  21
-		  SrcBlock		  "theta_init"
-		  SrcPort		  1
-		  Points		  [31, 0; 0, -40]
-		  DstBlock		  " SFunction "
-		  DstPort		  4
-		}
-		Line {
-		  ZOrder		  22
-		  SrcBlock		  "lambda_init"
-		  SrcPort		  1
-		  Points		  [83, 0; 0, -60]
-		  DstBlock		  " SFunction "
-		  DstPort		  5
-		}
-		Line {
-		  ZOrder		  23
-		  SrcBlock		  "lambda_end"
-		  SrcPort		  1
-		  Points		  [57, 0; 0, -75]
-		  DstBlock		  " SFunction "
-		  DstPort		  6
-		}
-		Line {
-		  ZOrder		  24
-		  SrcBlock		  "SW_lambda"
-		  SrcPort		  1
-		  Points		  [35, 0; 0, -90]
-		  DstBlock		  " SFunction "
-		  DstPort		  7
-		}
-		Line {
-		  ZOrder		  25
-		  SrcBlock		  "alpha_init"
-		  SrcPort		  1
-		  Points		  [109, 0; 0, -105]
-		  DstBlock		  " SFunction "
-		  DstPort		  8
-		}
-		Line {
-		  ZOrder		  26
-		  SrcBlock		  "alpha_end"
-		  SrcPort		  1
-		  Points		  [24, 0; 0, -120]
-		  DstBlock		  " SFunction "
-		  DstPort		  9
-		}
-		Line {
-		  ZOrder		  27
-		  SrcBlock		  "SW_2Stage"
-		  SrcPort		  1
-		  Points		  [72, 0; 0, -140]
-		  DstBlock		  " SFunction "
-		  DstPort		  10
-		}
-		Line {
-		  ZOrder		  28
-		  SrcBlock		  "lambda_gain"
-		  SrcPort		  1
-		  Points		  [54, 0; 0, -155]
-		  DstBlock		  " SFunction "
-		  DstPort		  11
-		}
-		Line {
-		  Name			  "para_est"
-		  ZOrder		  29
-		  Labels		  [0, 0]
-		  SrcBlock		  " SFunction "
-		  SrcPort		  2
-		  Points		  [6, 0; 0, -55]
-		  DstBlock		  "para_est"
-		  DstPort		  1
-		}
-		Line {
-		  Name			  "f_factor"
-		  ZOrder		  30
-		  Labels		  [0, 0]
-		  SrcBlock		  " SFunction "
-		  SrcPort		  3
-		  Points		  [12, 0; 0, -70]
-		  DstBlock		  "f_factor"
-		  DstPort		  1
-		}
-		Line {
-		  Name			  "alpha_rt"
-		  ZOrder		  31
-		  Labels		  [0, 0]
-		  SrcBlock		  " SFunction "
-		  SrcPort		  4
-		  Points		  [19, 0; 0, -85]
-		  DstBlock		  "alpha_rt"
-		  DstPort		  1
-		}
-		Line {
-		  Name			  "SW_NF98"
-		  ZOrder		  32
-		  Labels		  [0, 0]
-		  SrcBlock		  " SFunction "
-		  SrcPort		  5
-		  Points		  [25, 0; 0, -100]
-		  DstBlock		  "SW_NF98"
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  33
-		  SrcBlock		  " Demux "
-		  SrcPort		  1
-		  DstBlock		  " Terminator "
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  34
-		  SrcBlock		  " SFunction "
-		  SrcPort		  1
-		  Points		  [0, 185]
-		  DstBlock		  " Demux "
-		  DstPort		  1
-		}
-	      }
-	    }
-	    Block {
-	      BlockType		      SubSystem
-	      Name		      "Embedded\nMATLAB Function2"
-	      SID		      "1351"
-	      Ports		      [2, 2]
-	      Position		      [495, 515, 615, 575]
-	      ZOrder		      -4
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      LibraryVersion	      "1.30"
-	      ShowPortLabels	      "SignalName"
-	      ErrorFcn		      "Stateflow.Translate.translate"
-	      PermitHierarchicalResolution "ExplicitOnly"
-	      TreatAsAtomicUnit	      on
-	      RequestExecContextInheritance off
-	      SFBlockType	      "MATLAB Function"
-	      System {
-		Name			"Embedded\nMATLAB Function2"
-		Location		[219, 337, 814, 775]
-		SystemRect		[0.000000, 0.000000, 0.000000, 0.000000]
-		Open			off
-		PortBlocksUseCompactNotation off
-		SetExecutionDomain	off
-		ExecutionDomainType	"Deduce"
-		ModelBrowserVisibility	off
-		ModelBrowserWidth	200
-		ScreenColor		"white"
-		PaperOrientation	"landscape"
-		PaperPositionMode	"auto"
-		PaperType		"usletter"
-		PaperUnits		"inches"
-		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-		TiledPageScale		1
-		ShowPageBoundaries	off
-		ZoomFactor		"100"
-		SIDHighWatermark	"16"
-		SIDPrevWatermark	"13"
-		SimulinkSubDomain	"Simulink"
-		Block {
-		  BlockType		  Inport
-		  Name			  "u"
-		  SID			  "1351::1"
-		  Position		  [20, 101, 40, 119]
-		  ZOrder		  -1
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "THRESHOLD"
-		  SID			  "1351::10"
-		  Position		  [20, 136, 40, 154]
-		  ZOrder		  -2
-		  Port			  "2"
-		}
-		Block {
-		  BlockType		  Demux
-		  Name			  " Demux "
-		  SID			  "1351::15"
-		  Ports			  [1, 1]
-		  Position		  [270, 230, 320, 270]
-		  ZOrder		  2
-		  Outputs		  "1"
-		}
-		Block {
-		  BlockType		  S-Function
-		  Name			  " SFunction "
-		  SID			  "1351::14"
-		  Tag			  "Stateflow S-Function 3"
-		  Ports			  [2, 3]
-		  Position		  [180, 100, 230, 180]
-		  ZOrder		  1
-		  FunctionName		  "sf_sfun"
-		  PortCounts		  "[2 3]"
-		  SFunctionDeploymentMode off
-		  EnableBusSupport	  on
-		  SFcnIsStateOwnerBlock	  off
-		  Port {
-		    PortNumber		    2
-		    Name		    "y"
-		  }
-		  Port {
-		    PortNumber		    3
-		    Name		    "SW"
-		  }
-		}
-		Block {
-		  BlockType		  Terminator
-		  Name			  " Terminator "
-		  SID			  "1351::16"
-		  Position		  [460, 241, 480, 259]
-		  ZOrder		  3
-		}
-		Block {
-		  BlockType		  Outport
-		  Name			  "y"
-		  SID			  "1351::5"
-		  Position		  [460, 101, 480, 119]
-		  ZOrder		  -6
-		}
-		Block {
-		  BlockType		  Outport
-		  Name			  "SW"
-		  SID			  "1351::13"
-		  Position		  [460, 136, 480, 154]
-		  ZOrder		  -7
-		  Port			  "2"
-		}
-		Line {
-		  ZOrder		  7
-		  SrcBlock		  "u"
-		  SrcPort		  1
-		  Points		  [87, 0; 0, 10]
-		  DstBlock		  " SFunction "
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  8
-		  SrcBlock		  "THRESHOLD"
-		  SrcPort		  1
-		  Points		  [53, 0; 0, 15]
-		  DstBlock		  " SFunction "
-		  DstPort		  2
-		}
-		Line {
-		  Name			  "y"
-		  ZOrder		  9
-		  Labels		  [0, 0]
-		  SrcBlock		  " SFunction "
-		  SrcPort		  2
-		  Points		  [74, 0; 0, -30]
-		  DstBlock		  "y"
-		  DstPort		  1
-		}
-		Line {
-		  Name			  "SW"
-		  ZOrder		  10
-		  Labels		  [0, 0]
-		  SrcBlock		  " SFunction "
-		  SrcPort		  3
-		  Points		  [147, 0; 0, -20]
-		  DstBlock		  "SW"
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  11
-		  SrcBlock		  " Demux "
-		  SrcPort		  1
-		  DstBlock		  " Terminator "
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  12
-		  SrcBlock		  " SFunction "
-		  SrcPort		  1
-		  Points		  [16, 0; 0, 135]
-		  DstBlock		  " Demux "
-		  DstPort		  1
-		}
-	      }
-	    }
-	    Block {
-	      BlockType		      ManualSwitch
-	      Name		      "Manual Switch"
-	      SID		      "1361"
-	      Position		      [537, 195, 573, 225]
-	      ZOrder		      -5
-	      BlockRotation	      270
-	      NameLocation	      "right"
-	    }
-	    Block {
-	      BlockType		      Product
-	      Name		      "Product2"
-	      SID		      "750"
-	      Ports		      [2, 1]
-	      Position		      [585, 277, 615, 308]
-	      ZOrder		      -6
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      ShowName		      off
-	      RndMeth		      "Zero"
-	    }
-	    Block {
-	      BlockType		      Step
-	      Name		      "Step1"
-	      SID		      "754"
-	      Position		      [635, 274, 665, 296]
-	      ZOrder		      -7
-	      BlockMirror	      on
-	      ShowName		      off
-	      Time		      "t_AdapOn"
-	      SampleTime	      "Ts"
-	    }
-	    Block {
-	      BlockType		      Step
-	      Name		      "Step2"
-	      SID		      "755"
-	      Position		      [670, 289, 700, 311]
-	      ZOrder		      -8
-	      BlockMirror	      on
-	      ShowName		      off
-	      Time		      "t_AdapOff"
-	      Before		      "1"
-	      After		      "0"
-	      SampleTime	      "Ts"
-	    }
-	    Block {
-	      BlockType		      ToWorkspace
-	      Name		      "To Workspace2"
-	      SID		      "1370"
-	      Ports		      [1]
-	      Position		      [105, 157, 170, 183]
-	      ZOrder		      -9
-	      BlockMirror	      on
-	      ShowName		      off
-	      VariableName	      "Ffactor"
-	      MaxDataPoints	      "inf"
-	      SaveFormat	      "Structure With Time"
-	      SampleTime	      "-1"
-	    }
-	    Block {
-	      BlockType		      ToWorkspace
-	      Name		      "To Workspace5"
-	      SID		      "1304"
-	      Ports		      [1]
-	      Position		      [490, 30, 550, 60]
-	      ZOrder		      -10
-	      ShowName		      off
-	      VariableName	      "y3"
-	      MaxDataPoints	      "inf"
-	      SaveFormat	      "Structure With Time"
-	      SampleTime	      "-1"
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "adap_init.F 1"
-	      SID		      "1308"
-	      Position		      [355, 123, 470, 147]
-	      ZOrder		      -11
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      ShowName		      off
-	      Value		      "adap_init.F "
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "adap_init.SW_lambda1"
-	      SID		      "1309"
-	      Position		      [355, 220, 470, 250]
-	      ZOrder		      -12
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      ShowName		      off
-	      Value		      "adap_init.SW_lambda"
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "adap_init.alpha_end1"
-	      SID		      "1307"
-	      Position		      [355, 296, 470, 324]
-	      ZOrder		      -13
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      ShowName		      off
-	      Value		      "adap_init.SW_2Stage"
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "adap_init.alpha_end2"
-	      SID		      "1310"
-	      Position		      [355, 271, 470, 299]
-	      ZOrder		      -14
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      ShowName		      off
-	      Value		      "adap_init.alpha_end"
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "adap_init.alpha_end3"
-	      SID		      "1371"
-	      Position		      [355, 321, 470, 349]
-	      ZOrder		      -15
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      ShowName		      off
-	      Value		      "adap_init.lambda_gain"
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "adap_init.alpha_init1"
-	      SID		      "1311"
-	      Position		      [355, 247, 470, 273]
-	      ZOrder		      -16
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      ShowName		      off
-	      Value		      "adap_init.alpha_init"
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "adap_init.lambda_end1"
-	      SID		      "1312"
-	      Position		      [355, 196, 470, 224]
-	      ZOrder		      -17
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      ShowName		      off
-	      Value		      "adap_init.lambda_end"
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "adap_init.lambda_init1"
-	      SID		      "1313"
-	      Position		      [355, 172, 470, 198]
-	      ZOrder		      -18
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      ShowName		      off
-	      Value		      "adap_init.lambda_init"
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "adap_init.theta1"
-	      SID		      "1314"
-	      Position		      [355, 147, 470, 173]
-	      ZOrder		      -19
-	      BlockMirror	      on
-	      NameLocation	      "top"
-	      ShowName		      off
-	      Value		      "adap_init.theta"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "denoise filter"
-	      SID		      "765"
-	      Ports		      [1, 1]
-	      Position		      [570, 68, 655, 102]
-	      ZOrder		      -20
-	      BlockMirror	      on
-	      DropShadow	      on
-	      NameLocation	      "top"
-	      LibraryVersion	      "2.3"
-	      SourceBlock	      "cstblocks/LTI System"
-	      SourceType	      "LTI Block"
-	      SourceProductBaseCode   "CT"
-	      RTWMemSecFuncInitTerm   "Inherit from model"
-	      RTWMemSecFuncExecute    "Inherit from model"
-	      RTWMemSecDataConstants  "Inherit from model"
-	      RTWMemSecDataInternal   "Inherit from model"
-	      RTWMemSecDataParameters "Inherit from model"
-	      ContentPreviewEnabled   off
-	      sys		      "denoise_filter"
-	      IC		      "[]"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "theta"
-	      SID		      "779"
-	      Position		      [55, 103, 85, 117]
-	      ZOrder		      -21
-	      BlockMirror	      on
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "SW_NF"
-	      SID		      "780"
-	      Position		      [55, 283, 85, 297]
-	      ZOrder		      -22
-	      BlockMirror	      on
-	      Port		      "2"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "alpha"
-	      SID		      "781"
-	      Position		      [55, 223, 85, 237]
-	      ZOrder		      -23
-	      BlockMirror	      on
-	      Port		      "3"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "sw"
-	      SID		      "782"
-	      Position		      [370, 88, 400, 102]
-	      ZOrder		      -24
-	      BlockMirror	      on
-	      Port		      "4"
-	    }
-	    Line {
-	      ZOrder		      1
-	      SrcBlock		      "denoise filter"
-	      SrcPort		      1
-	      Points		      [-5, 0]
-	      Branch {
-		ZOrder			2
-		Points			[-110, 0]
-		Branch {
-		  ZOrder		  3
-		  Points		  [0, -40]
-		  DstBlock		  "To Workspace5"
-		  DstPort		  1
-		}
-		Branch {
-		  ZOrder		  4
-		  Points		  [-120, 0]
-		  DstBlock		  "Embedded\nMATLAB Function1"
-		  DstPort		  1
-		}
-	      }
-	      Branch {
-		ZOrder			5
-		Points			[0, 75; 170, 0; 0, 370]
-		DstBlock		"Embedded\nMATLAB Function2"
-		DstPort			1
-	      }
-	    }
-	    Line {
-	      ZOrder		      6
-	      SrcBlock		      "Step2"
-	      SrcPort		      1
-	      DstBlock		      "Product2"
-	      DstPort		      2
-	    }
-	    Line {
-	      ZOrder		      7
-	      SrcBlock		      "Step1"
-	      SrcPort		      1
-	      DstBlock		      "Product2"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      8
-	      SrcBlock		      "d hat"
-	      SrcPort		      1
-	      DstBlock		      "denoise filter"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      9
-	      SrcBlock		      "adap_init.alpha_end1"
-	      SrcPort		      1
-	      Points		      [-20, 0]
-	      DstBlock		      "Embedded\nMATLAB Function1"
-	      DstPort		      10
-	    }
-	    Line {
-	      ZOrder		      10
-	      SrcBlock		      "adap_init.F 1"
-	      SrcPort		      1
-	      Points		      [-20, 0]
-	      DstBlock		      "Embedded\nMATLAB Function1"
-	      DstPort		      3
-	    }
-	    Line {
-	      ZOrder		      11
-	      SrcBlock		      "adap_init.theta1"
-	      SrcPort		      1
-	      DstBlock		      "Embedded\nMATLAB Function1"
-	      DstPort		      4
-	    }
-	    Line {
-	      ZOrder		      12
-	      SrcBlock		      "adap_init.lambda_init1"
-	      SrcPort		      1
-	      Points		      [-20, 0]
-	      DstBlock		      "Embedded\nMATLAB Function1"
-	      DstPort		      5
-	    }
-	    Line {
-	      ZOrder		      13
-	      SrcBlock		      "adap_init.lambda_end1"
-	      SrcPort		      1
-	      Points		      [-20, 0]
-	      DstBlock		      "Embedded\nMATLAB Function1"
-	      DstPort		      6
-	    }
-	    Line {
-	      ZOrder		      14
-	      SrcBlock		      "adap_init.SW_lambda1"
-	      SrcPort		      1
-	      Points		      [-20, 0]
-	      DstBlock		      "Embedded\nMATLAB Function1"
-	      DstPort		      7
-	    }
-	    Line {
-	      ZOrder		      15
-	      SrcBlock		      "adap_init.alpha_init1"
-	      SrcPort		      1
-	      Points		      [-20, 0]
-	      DstBlock		      "Embedded\nMATLAB Function1"
-	      DstPort		      8
-	    }
-	    Line {
-	      ZOrder		      16
-	      SrcBlock		      "adap_init.alpha_end2"
-	      SrcPort		      1
-	      Points		      [-20, 0]
-	      DstBlock		      "Embedded\nMATLAB Function1"
-	      DstPort		      9
-	    }
-	    Line {
-	      ZOrder		      17
-	      SrcBlock		      "Embedded\nMATLAB Function1"
-	      SrcPort		      1
-	      DstBlock		      "theta"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      18
-	      SrcBlock		      "Embedded\nMATLAB Function1"
-	      SrcPort		      3
-	      DstBlock		      "alpha"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      19
-	      SrcBlock		      "Constant1"
-	      SrcPort		      1
-	      DstBlock		      "Embedded\nMATLAB Function2"
-	      DstPort		      2
-	    }
-	    Line {
-	      ZOrder		      20
-	      SrcBlock		      "Embedded\nMATLAB Function2"
-	      SrcPort		      2
-	      Points		      [-40, 0; 0, -45; -40, 0; 0, -140; 95, 0; 0, -135]
-	      DstBlock		      "Manual Switch"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      21
-	      SrcBlock		      "Product2"
-	      SrcPort		      1
-	      Points		      [-15, 0]
-	      DstBlock		      "Manual Switch"
-	      DstPort		      2
-	    }
-	    Line {
-	      ZOrder		      22
-	      SrcBlock		      "Manual Switch"
-	      SrcPort		      1
-	      Points		      [0, -70; -70, 0]
-	      Branch {
-		ZOrder			23
-		DstBlock		"Embedded\nMATLAB Function1"
-		DstPort			2
-	      }
-	      Branch {
-		ZOrder			24
-		Points			[0, -25]
-		DstBlock		"sw"
-		DstPort			1
-	      }
-	    }
-	    Line {
-	      ZOrder		      25
-	      SrcBlock		      "Embedded\nMATLAB Function1"
-	      SrcPort		      4
-	      DstBlock		      "SW_NF"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      26
-	      SrcBlock		      "Embedded\nMATLAB Function1"
-	      SrcPort		      2
-	      DstBlock		      "To Workspace2"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      27
-	      SrcBlock		      "adap_init.alpha_end3"
-	      SrcPort		      1
-	      Points		      [-20, 0]
-	      DstBlock		      "Embedded\nMATLAB Function1"
-	      DstPort		      11
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "stable P inverse"
-	  SID			  "769"
-	  Ports			  [1, 1]
-	  Position		  [1015, 73, 1070, 97]
-	  ZOrder		  -16
-	  DropShadow		  on
-	  LibraryVersion	  "2.3"
-	  SourceBlock		  "cstblocks/LTI System"
-	  SourceType		  "LTI Block"
-	  SourceProductBaseCode	  "CT"
-	  RTWMemSecFuncInitTerm	  "Inherit from model"
-	  RTWMemSecFuncExecute	  "Inherit from model"
-	  RTWMemSecDataConstants  "Inherit from model"
-	  RTWMemSecDataInternal	  "Inherit from model"
-	  RTWMemSecDataParameters "Inherit from model"
-	  ContentPreviewEnabled	  off
-	  sys			  "P_inv"
-	  IC			  "[]"
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "c"
-	  SID			  "846"
-	  Position		  [15, 273, 45, 287]
-	  ZOrder		  -17
-	  BlockMirror		  on
-	}
-	Line {
-	  ZOrder		  1
-	  SrcBlock		  "Sum2"
-	  SrcPort		  1
-	  Points		  [0, 50]
-	  DstBlock		  "Embedded\nMATLAB Function3"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  2
-	  SrcBlock		  "stable P inverse"
-	  SrcPort		  1
-	  Points		  [15, 0]
-	  DstBlock		  "Sum2"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  3
-	  SrcBlock		  "Integer Delay"
-	  SrcPort		  1
-	  DstBlock		  "Sum2"
-	  DstPort		  2
-	}
-	Line {
-	  ZOrder		  4
-	  SrcBlock		  "dist. ID"
-	  SrcPort		  4
-	  Points		  [10, 0]
-	  Branch {
-	    ZOrder		    5
-	    Points		    [0, 30]
-	    Branch {
-	      ZOrder		      6
-	      Points		      [0, 75; -30, 0]
-	      Branch {
-		ZOrder			7
-		DstBlock		"Embedded\nMATLAB Function3"
-		DstPort			2
-	      }
-	      Branch {
-		ZOrder			8
-		DstBlock		"Embedded\nMATLAB Function1"
-		DstPort			2
-	      }
-	    }
-	    Branch {
-	      ZOrder		      9
-	      DstBlock		      "Embedded\nMATLAB Function7"
-	      DstPort		      2
-	    }
-	  }
-	  Branch {
-	    ZOrder		    10
-	    Points		    [0, -90]
-	    DstBlock		    "Embedded\nMATLAB Function2"
-	    DstPort		    2
-	  }
-	}
-	Line {
-	  ZOrder		  11
-	  SrcBlock		  "dist. ID"
-	  SrcPort		  3
-	  Points		  [20, 0]
-	  Branch {
-	    ZOrder		    12
-	    DstBlock		    "To Workspace6"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    13
-	    Points		    [0, 135; -40, 0]
-	    Branch {
-	      ZOrder		      14
-	      DstBlock		      "Embedded\nMATLAB Function3"
-	      DstPort		      3
-	    }
-	    Branch {
-	      ZOrder		      15
-	      DstBlock		      "Embedded\nMATLAB Function1"
-	      DstPort		      3
-	    }
-	  }
-	}
-	Line {
-	  ZOrder		  16
-	  SrcBlock		  "dist. ID"
-	  SrcPort		  1
-	  Points		  [30, 0]
-	  Branch {
-	    ZOrder		    17
-	    DstBlock		    "To Workspace4"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    18
-	    Points		    [0, 105]
-	    Branch {
-	      ZOrder		      19
-	      Points		      [0, 75; -50, 0]
-	      Branch {
-		ZOrder			20
-		DstBlock		"Embedded\nMATLAB Function3"
-		DstPort			4
-	      }
-	      Branch {
-		ZOrder			21
-		DstBlock		"Embedded\nMATLAB Function1"
-		DstPort			4
-	      }
-	    }
-	    Branch {
-	      ZOrder		      22
-	      DstBlock		      "Embedded\nMATLAB Function7"
-	      DstPort		      4
-	    }
-	  }
-	  Branch {
-	    ZOrder		    23
-	    Points		    [0, -15]
-	    DstBlock		    "Embedded\nMATLAB Function2"
-	    DstPort		    4
-	  }
-	}
-	Line {
-	  ZOrder		  24
-	  SrcBlock		  "Secondary path model"
-	  SrcPort		  1
-	  DstBlock		  "Sum1"
-	  DstPort		  2
-	}
-	Line {
-	  ZOrder		  25
-	  SrcBlock		  "Sum1"
-	  SrcPort		  1
-	  DstBlock		  "dist. ID"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  26
-	  SrcBlock		  "y"
-	  SrcPort		  1
-	  Points		  [0, 15]
-	  Branch {
-	    ZOrder		    27
-	    DstBlock		    "Sum1"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    28
-	    DstBlock		    "Embedded\nMATLAB Function2"
-	    DstPort		    1
-	  }
-	}
-	Line {
-	  ZOrder		  29
-	  SrcBlock		  "u"
-	  SrcPort		  1
-	  Points		  [0, 15]
-	  Branch {
-	    ZOrder		    30
-	    Points		    [0, 35]
-	    DstBlock		    "Embedded\nMATLAB Function7"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    31
-	    DstBlock		    "Secondary path model"
-	    DstPort		    1
-	  }
-	}
-	Line {
-	  ZOrder		  32
-	  SrcBlock		  "Embedded\nMATLAB Function3"
-	  SrcPort		  1
-	  Points		  [-20, 0]
-	  DstBlock		  "Embedded\nMATLAB Function1"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  33
-	  SrcBlock		  "Embedded\nMATLAB Function7"
-	  SrcPort		  1
-	  DstBlock		  "Integer Delay"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  34
-	  SrcBlock		  "Embedded\nMATLAB Function2"
-	  SrcPort		  1
-	  DstBlock		  "stable P inverse"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  35
-	  SrcBlock		  "adap_init.alpha_end1"
-	  SrcPort		  1
-	  Points		  [0, 0]
-	  Branch {
-	    ZOrder		    36
-	    DstBlock		    "Embedded\nMATLAB Function2"
-	    DstPort		    3
-	  }
-	  Branch {
-	    ZOrder		    37
-	    Points		    [0, 120]
-	    DstBlock		    "Embedded\nMATLAB Function7"
-	    DstPort		    3
-	  }
-	}
-	Line {
-	  ZOrder		  38
-	  SrcBlock		  "dist. ID"
-	  SrcPort		  2
-	  Points		  [195, 0; 0, 185]
-	  DstBlock		  "Switch"
-	  DstPort		  2
-	}
-	Line {
-	  ZOrder		  39
-	  SrcBlock		  "Embedded\nMATLAB Function1"
-	  SrcPort		  1
-	  Points		  [-10, 0]
-	  Branch {
-	    ZOrder		    40
-	    Points		    [0, 50]
-	    DstBlock		    "Switch"
-	    DstPort		    3
-	  }
-	  Branch {
-	    ZOrder		    41
-	    Points		    [-105, 0]
-	    DstBlock		    "Switch"
-	    DstPort		    1
-	  }
-	}
-	Line {
-	  ZOrder		  42
-	  SrcBlock		  "Switch"
-	  SrcPort		  1
-	  Points		  [-5, 0; 0, -40]
-	  DstBlock		  "c"
-	  DstPort		  1
-	}
-      }
-    }
-    Block {
       BlockType		      Sum
       Name		      "Subtract"
       SID		      "470"
@@ -7091,7 +7138,7 @@ Model {
 	ZOrder			3
 	Labels			[0, 0]
 	Points			[0, 105]
-	DstBlock		"Subsystem"
+	DstBlock		"Adaptive Disturbance Observer"
 	DstPort			2
       }
       Branch {
@@ -7135,7 +7182,7 @@ Model {
 	ZOrder			11
 	Labels			[0, 0]
 	Points			[0, 90]
-	DstBlock		"Subsystem"
+	DstBlock		"Adaptive Disturbance Observer"
 	DstPort			1
       }
     }
@@ -7193,7 +7240,7 @@ Model {
     }
     Line {
       ZOrder		      19
-      SrcBlock		      "Subsystem"
+      SrcBlock		      "Adaptive Disturbance Observer"
       SrcPort		      1
       Points		      [0, 30; -225, 0]
       DstBlock		      "Saturation2"
@@ -7226,15 +7273,12 @@ Stateflow {
   chart {
     id			    2
     machine		    1
-    name		    "Subsystem/Embedded\nMATLAB Function1"
+    name		    "Adaptive Disturbance Observer/Embedded\nMATLAB Function1"
     windowPosition	    [394 541 161 328]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1920 1080 1.333333333333333]
     treeNode		    [0 3 0 0]
     viewObj		    2
-    visible		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    18
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -7445,21 +7489,18 @@ Stateflow {
   instance {
     id			    11
     machine		    1
-    name		    "Subsystem/Embedded\nMATLAB Function1"
+    name		    "Adaptive Disturbance Observer/Embedded\nMATLAB Function1"
     chart		    2
   }
   chart {
     id			    12
     machine		    1
-    name		    "Subsystem/Embedded\nMATLAB Function3"
+    name		    "Adaptive Disturbance Observer/Embedded\nMATLAB Function3"
     windowPosition	    [424 571 161 328]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1920 1080 1.333333333333333]
     treeNode		    [0 13 0 0]
     viewObj		    12
-    visible		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    18
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -7670,21 +7711,18 @@ Stateflow {
   instance {
     id			    21
     machine		    1
-    name		    "Subsystem/Embedded\nMATLAB Function3"
+    name		    "Adaptive Disturbance Observer/Embedded\nMATLAB Function3"
     chart		    12
   }
   chart {
     id			    22
     machine		    1
-    name		    "Subsystem/dist. ID/Embedded\nMATLAB Function2"
+    name		    "Adaptive Disturbance Observer/dist. ID/Embedded\nMATLAB Function2"
     windowPosition	    [349 496 161 328]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1920 1080 1.333333333333333]
     treeNode		    [0 23 0 0]
     viewObj		    22
-    visible		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -7851,21 +7889,18 @@ Stateflow {
   instance {
     id			    30
     machine		    1
-    name		    "Subsystem/dist. ID/Embedded\nMATLAB Function2"
+    name		    "Adaptive Disturbance Observer/dist. ID/Embedded\nMATLAB Function2"
     chart		    22
   }
   chart {
     id			    31
     machine		    1
-    name		    "Subsystem/Embedded\nMATLAB Function7"
+    name		    "Adaptive Disturbance Observer/Embedded\nMATLAB Function7"
     windowPosition	    [409 556 161 328]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1920 1080 1.333333333333333]
     treeNode		    [0 32 0 0]
     viewObj		    31
-    visible		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    18
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -8076,21 +8111,18 @@ Stateflow {
   instance {
     id			    40
     machine		    1
-    name		    "Subsystem/Embedded\nMATLAB Function7"
+    name		    "Adaptive Disturbance Observer/Embedded\nMATLAB Function7"
     chart		    31
   }
   chart {
     id			    41
     machine		    1
-    name		    "Subsystem/Embedded\nMATLAB Function2"
+    name		    "Adaptive Disturbance Observer/Embedded\nMATLAB Function2"
     windowPosition	    [424 571 161 328]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1920 1080 1.333333333333333]
     treeNode		    [0 42 0 0]
     viewObj		    41
-    visible		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    18
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -8301,13 +8333,13 @@ Stateflow {
   instance {
     id			    50
     machine		    1
-    name		    "Subsystem/Embedded\nMATLAB Function2"
+    name		    "Adaptive Disturbance Observer/Embedded\nMATLAB Function2"
     chart		    41
   }
   chart {
     id			    51
     machine		    1
-    name		    "Subsystem/dist. ID/Embedded\nMATLAB Function1"
+    name		    "Adaptive Disturbance Observer/dist. ID/Embedded\nMATLAB Function1"
     windowPosition	    [379 526 161 328]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1920 1080 1.333333333333333]
@@ -8820,7 +8852,7 @@ Stateflow {
   instance {
     id			    70
     machine		    1
-    name		    "Subsystem/dist. ID/Embedded\nMATLAB Function1"
+    name		    "Adaptive Disturbance Observer/dist. ID/Embedded\nMATLAB Function1"
     chart		    51
   }
   target {
