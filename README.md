@@ -1,7 +1,7 @@
 # MACS Adaptive Regulation Benchmark (MACS ARB) LV2
 - Fast adaptative regulation of multiple unknown, time-varying disturbances.
 - A continuation of the [level 1 ARR](https://github.com/macs-lab/macs-arb-adaptive-regulation-benchmark)
-- This is a incomplete codebase for training purposes. 
+- This is an incomplete codebase for training purposes. 
 
 The MACS ARB is a top-tier algorithm in the 2012-2013 [*International Benchmark on Adaptive Regulation*](http://dx.doi.org/10.1016/j.ejcon.2013.05.007) by Ioan D. Landau. The benchmark provided state-of-the-art evaluation and dissemination of adaptation methods for active vibration control and noise control. 
 
