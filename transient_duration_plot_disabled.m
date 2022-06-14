@@ -131,8 +131,8 @@ if SW_PLOT  % added by Xu Chen, xuchen@cal.berkeley.edu
     hold on
     plot(t,-threshold_vec2,'k','LineWidth',2)
     grid on
-    XLABEL('Time [sec]')
-    YLABEL('Residual force [V]')
+    xlabel('Time [sec]')
+    ylabel('Residual force [V]')
     title('Adaptive disturbance rejection')
     
     
@@ -162,8 +162,8 @@ if SW_PLOT  % added by Xu Chen, xuchen@cal.berkeley.edu
         'BackgroundColor',[.7 .9 .7],...
         'FontSize',16);
     grid on
-    XLABEL('Time [sec]')
-    YLABEL('Residual force [V]')
+    xlabel('Time [sec]')
+    ylabel('Residual force [V]')
     title('Adaptive disturbance rejection')
     xlim([Td-0.1 Td+2*TD]);
     ylim([-max(abs(y)) max(abs(y))]);

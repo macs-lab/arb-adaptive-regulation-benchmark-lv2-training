@@ -196,13 +196,13 @@ end
 if SW_BASELINE_CONTROL_SYS
     L       = length(bruitbench);
     NFFT    = 2^nextpow2(L);
-    [spec_bruitbench.f,spec_bruitbench.amp] =...
-        spectre_psd_rms(bruitbench,Fs,NFFT);
-    figure;
-    plot(spec_bruitbench.f,spec_bruitbench.amp)
-    xlabel('Frequency [Hz]')
-    ylabel('dB [Vrms]')
-    title('Spectral density of the measurement noise')
+    % [spec_bruitbench.f,spec_bruitbench.amp] =...
+    %    spectre_psd_rms(bruitbench,Fs,NFFT);
+    % figure;
+    % plot(spec_bruitbench.f,spec_bruitbench.amp)
+    % xlabel('Frequency [Hz]')
+    % ylabel('dB [Vrms]')
+    % title('Spectral density of the measurement noise')
 end
 
 if SW_newSSModel
